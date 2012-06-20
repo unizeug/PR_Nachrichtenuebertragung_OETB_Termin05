@@ -105,13 +105,86 @@
 	Kanalcodierung des Übertragungskanal kann dabei für zusätzlichen Fehlerschutz
 	vor Übertragungsfehlern sorgen.
 	
-\end{quote}%section
+	\TODO{Abb. 9.2 - PCM-Übertragung aus dem Skript einfügen}
+	
+	Eine digitale Übertragung bietet viele Vorteile, wie zum Beispiel
+	\begin{itemize}
+		\item die Übertargungsqualität nimmt über weite Entfernungen durch den Einsatz
+		von Regenerativverstärkern nicht ab
+		\item die Multiplexbildung (z.B. TDM) ist vereinfacht
+		\item es ist eine Integration von digitaler Übertragung und digitaler
+		Vermittlung vorhanden
+		\item die Wirtschaftlichkeit ist größer
+		\item das Zusammenwirken mit digitalen Verfahren der Nachrichtenverarbeitung
+		ist vereinfacht
+		\item die Integration von Diensten ist möglich 
+		\item es ist eine praktisch störungsfreie Übertragung durch Fehlerkorrekturen
+		erreichbar
+		\item und es besteht die Möglichkeit der Verschlüsselung um die Wahrung des
+		Fernmeldegeheimnisses zu verbessern.
+	\end{itemize}
+	
+	\vspace{1em}
+	
+	Die beiden Nachteile der digitalen Übertragung sind dagegen
+	\begin{itemize}
+		\item die Entstehung von Quantisierungfehlern
+		\item und der erhöhte Bandbreitebedarf.
+	\end{itemize}
+	
+	\vspace{0.5em}
+	
+	An dieser Stelle ist zu erwähnen, dass die Quantisierungfehler bei einer
+	PCM-Übertragung relativ klein gehalten werden können und dass der höhere
+	Bandbreitebedarf bei modernen digitalen verfahren mit effizienten
+	Quellencodierungen und mehrstufigen Übertragungen der Binärinformation nicht
+	mehr auftritt.\\
+	
+	Wie bereits erwähnt, wird bei der PCM-Übertragung das analoge Signal mit einer
+	oberen Grenzfrequenz von $B_{Quelle}$ mit einer Abtastfrequenz von $f_T \geq 2
+	\cdot B_{Quelle}$ abgetastet, wodurch ein PAM Signal mit den Abtastwerten im
+	Abstand $T = \frac{1}{f_T}$ entsteht. Anhand eines Quantisierers wird diesen
+	Werten jeweils eins von $M = 2^m$ möglichen wertdiskreten Signalen zugeordnet,
+	deren Indizes in digitale Codewörter umgewandelt werden. Diese Codewörter sind
+	typischerweise in binärer Form und bestehen aus $m = ld(M)$ Bit pro Abtastwert.
+	Dabei einsteht eine Bitrate von $R_{Bit} = f_T \cdot m \frac{bit}{s}$.\\
+	
+	Zusammen ergeben der Abtaster, das Halteglied und der Quantisierer den
+	A/D-Wandler bei der Digitalisierung eines analogen Signals.
+	
+	\TODO{Abb. 9.3 - Digitalisierung eines analogen Signals aus dem Skript
+	einfügen}
+	
+	
+	
+	
+	
+	
+	
+	\end{quote}%section
 
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------    
 \section{Vorbereitungsaufgabe}
 \begin{quote}
-
+	
+	Die theoretische Aufgabe für die Vorbereitung des Labortermin bestand darin,
+	sich erneut mit dem Kapitel über Pulscodemodulation aus dem Skript zu
+	beschäftigen. Das Wesentliche wurde in dem Theorieabschnitt des Protokolls
+	erläutert. Außerdem sollten wir uns mit der Funktionsweise der für
+	die PCM-Übertargungsstrecke relevanten Module des ETT-Schaltbretts vertraut
+	machen und uns ein Blockschaltbild erarbeiten, welches den Aufbau realsieren
+	könnte.\\
+	
+	\TODO{Blockschaltbild einfügen}
+	
+	Zuletzt sollte das in der Vorgabe gegebene MATLAB Skript PCM\_Analyse.m so
+	vervollständigt werden, dass die Datei bei der Ausführung automatisch die
+	PCM-Encoder-Kennlinie bestimmt. Der Code konnte anhand der Datei
+	pcm\_data\_test.mat getestet und kontrolliert werden. 
+	
+	\TODO{Kennlinie einfügen und beschreiben}
+	
 \end{quote}%Theorie beenden
 
 %--------------------------------------------------------------------
