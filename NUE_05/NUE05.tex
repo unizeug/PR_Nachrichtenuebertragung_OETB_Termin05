@@ -67,7 +67,10 @@
 \section{Einleitung}
 \begin{quote}
 	
-	
+	In diesem Termin wird eine Pulscodemodulation (PCM) Übertragungstrecke
+	aufgebaut und untersucht. Außerdem wird der Ausmaß von Quantisierungsfehlern
+	bei der digitalen Übertragung, sowie das Leistungsdichtespektrum (LDS) dieser
+	Fehler gemessen.
 
 \end{quote}%beende Einleitung
 %--------------------------------------------------------------------
@@ -75,6 +78,16 @@
 
 \section{Motivation}
 \begin{quote}
+	
+	Ursprünglich wurden Signale wie Mess-, Audio- und Bildsignale ausschließlich in
+	analoger Form übertragen. Durch diese Art der Übertragung treten aber
+	Rauschstörungen, lineare Verzerrungen (Änderungen des Frequenzganges) und
+	nichtlineare Verzerrungen (Klirr) auf, welche auf der Empfängerseite kaum
+	verringert werden können. Diese Störungen treten bei der digitalen Übertragung
+	kaum auf, oder können beliebig klein gehalten werden, weshalb analoge Signale
+	verstärkt anhand digitaler Kanäle übetragen werden.\\
+	
+	Eine Art der digitalen Übertragung ist die Pulscodemodulation.
 	
 \end{quote} %section
 
@@ -85,7 +98,13 @@
 \section{Theorie}
 \begin{quote}
 
-    
+	Eine Pulscodemodulation basiert auf das Abtasten und Codeworterzeugung eines
+	analogen Signals. Dabei wird das analoge Signal mithilfe eines A/D-Wandlers
+	digitalisiert, codiert und nach der Übertragung beim Empfänger decodiert und
+	mit einem D/A-Wandler wieder in ein analoges Signal umgewandelt. Eine
+	Kanalcodierung des Übertragungskanal kann dabei für zusätzlichen Fehlerschutz
+	vor Übertragungsfehlern sorgen.
+	
 \end{quote}%section
 
 %--------------------------------------------------------------------
