@@ -98,22 +98,6 @@ umax=2;
 %ULSB
 ULSB = (2*umax)/(2^(m)-1);
 
-% Vektor mit den Codewörtern für ein Bit
-Codevek = zeros(m,1);
-for n=1:m
-    Codevek(n) = 2^(m-n);
-end
-
-% Vektor mit CodeWörtern für
-Codevek2 = Codevek;
-for o=1:(AnzahlBitWorte-1)
-    Codevek2 = [Codevek2 ; Codevek];
-end
-
-Codevek3 = zeros(AnzahlBitWorte,1);
-%for p=1:m:AnzahlBitWorte
-%    Codevek3(l:l+m-1) = Codevek2(l
-%end
 
 % Vektor für die Dezimalwerte der Bitworte
 DecVal=ones(1,AnzahlBitWorte);
@@ -132,3 +116,19 @@ xlabel('Spannung [V]');
 ylabel('Abtaststufe');
 axis([-2 2 0 258]);
 
+% % Vektor mit den Codewörtern für ein Bit
+% Codevek = zeros(m,1);
+% for n=1:m
+%     Codevek(n) = 2^(m-n);
+% end
+% 
+% % Vektor mit CodeWörtern für
+% Codevek2 = Codevek;
+% for o=1:(AnzahlBitWorte-1)
+%     Codevek2 = [Codevek2 ; Codevek];
+% end
+% 
+% Codevek3 = zeros(AnzahlBitWorte,1);
+% %for p=1:m:AnzahlBitWorte
+% %    Codevek3(l:l+m-1) = Codevek2(l
+% %end
