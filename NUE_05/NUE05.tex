@@ -339,6 +339,20 @@
         Die Ursache dafür vermuten wir in dem Quantisierer, der nunmal nicht ideal arbeitet sondern eben real umgesetzt
         ist.\\
         \TODO{Kontrollieren ob dieses unsymmetrische verhalten richtig ist, oder ob da noch } \\
+        
+        Außerdem lassen sich mehrere Stufen für einen Spannungswert ausmachen. Diese Stufen liegen jedoch sehr dicht
+        beieinander. Die Ursache dafür wird sein, dass mehrmals der selbe Spannungswert im Originalsignal vorkam und
+        ihm beim quantisieren unterschiedliche Wert zugeweisen wurden. Da diese Werte sich nur um max $4$ Stufen
+        unterscheidet und diese Stufen sehr klein sind entsteht dadurch kein schwerwiegender Fehler. Jedoch wird es den
+        Quantisierungsfehler verstärken. Denkbar ist auch, dass einzelne Bits während der Übertragung verfälscht
+        wurden.\vspace{1em}
+        
+        Wenn man die Grafik bei dem Spannungswert $0V$ vergößert fällt auf, dass die Kennlinie auch für diese Spannung
+        einen Wert besitzt. Dadurch lässt sich darauf schließen, dass es sich bei dem eingesetzten Quantisierer um
+        einen Midtread Quantisierer gehandelt hat. Im Falle eine Midrise Quantisierers hätte die Kennlinie
+        zwei Stufen nahe bei der Spannung $0V$ jedoch keine genau bei diesem Spannungswert.
+        
+        
     
     \end{quote}  % Ende Subsection Vorbereitungsaufgabe
     
@@ -354,7 +368,9 @@
         \end{figure}
         
         Diese PCM-Encoder-Kennlinie unterscheidet sich auffällig von der aus der Vorbereitungsaufgabe.
-        Sie ist offensichtlich linear und die Abstände zwischen den Quantisierungsstufen sind gleich groß. Das 
+        Sie ist offensichtlich linear und die Abstände zwischen den Quantisierungsstufen sind gleich groß. Im Gegensatz
+        zu dem Quantisierer in der Vorbereitungsaufgabe haben die Quantisierungsstufen in diesem Fall alle den selben
+        Abstand.
         
         \TODO{Boris: überarbeiten} \\
           hat daher

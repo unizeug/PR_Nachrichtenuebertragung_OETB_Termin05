@@ -99,20 +99,12 @@ for i=1:AnzahlBitWorte
     %length(Datenblock)
 end
 
-% Data bereinigen:
-Dateninbit(Dateninbit<0.5)=0;
-Dateninbit(Dateninbit>=0.5)=1;
+% % Data bereinigen:
+% Dateninbit(Dateninbit<0.5)=0;
+% Dateninbit(Dateninbit>=0.5)=1;
 
 Dateninbit = Dateninbit';
 originalspannung = originalspannung';
-
-for n=1:AnzahlBitWorte
-   bin2dec(num2str(Dateninbit(1:8)));
-end
-
-umax=2;
-%ULSB
-ULSB = (2*umax)/(2^(m)-1);
 
 
 % Vektor für die Dezimalwerte der Bitworte
