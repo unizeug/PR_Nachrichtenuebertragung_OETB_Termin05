@@ -132,13 +132,13 @@ stem(VoltVal,DecVal);
 xlabel('Spannung [V]');
 ylabel('Abtaststufe');
 %axis([-2.5 2.5 0 274]);
-
-figure(2);
-stem(DecVal,VoltVal);
-xlabel('Abtaststufe');
-ylabel('Spannung [V]');
-axis([0 255 -2.5 2.5]);
-
+% 
+% figure(2);
+% stem(DecVal,VoltVal);
+% xlabel('Abtaststufe');
+% ylabel('Spannung [V]');
+% axis([0 255 -2.5 2.5]);
+% 
 % figure(11);
 % stem(Data);
 % hold on

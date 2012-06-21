@@ -323,7 +323,8 @@
         
         Es fällt auf, dass es sich bei dieser Kennlinie um eine nichtlinieare Kennlinie handlet. Der Spannungsbereich um
         $0V$ ist wesentlich höher aufgelöst als an den Rändern der Kennlinie. Mit anderen Worten, die
-        Quantisierungsstufen liegen um $0V$ dichter beieinander als bei $\pm 1.5V$.\\
+        Quantisierungsstufen liegen um $0V$ dichter beieinander als bei $\pm 1.5V$.\vspace{1em}
+        
         Ein solcher Quantisierer kann interessant sein wenn es einen besondern Bereich innerhalb des Nutzsignals gibt,
         der mit höherer Auflösung übertragen werden soll als andere. Als Konsequenz verschlechtert sich dadurch
         automatisch die Auflösung des randbereichs, da ja nicht mehr Bits bzw. Stufen zur verfügung
@@ -337,7 +338,8 @@
         Bereich geht der Quantisierer schon für $-1,6 V$ in Sättigung während er im oberen Bereich für $2 V$ in
         Sättigung geht.\\
         Die Ursache dafür vermuten wir in dem Quantisierer, der nunmal nicht ideal arbeitet sondern eben real umgesetzt
-        ist.\\
+        ist.\vspace{1em}
+        
         \TODO{Kontrollieren ob dieses unsymmetrische verhalten richtig ist, oder ob da noch } \\
         
         Außerdem lassen sich mehrere Stufen für einen Spannungswert ausmachen. Diese Stufen liegen jedoch sehr dicht
@@ -370,16 +372,20 @@
         Diese PCM-Encoder-Kennlinie unterscheidet sich auffällig von der aus der Vorbereitungsaufgabe.
         Sie ist offensichtlich linear und die Abstände zwischen den Quantisierungsstufen sind gleich groß. Im Gegensatz
         zu dem Quantisierer in der Vorbereitungsaufgabe haben die Quantisierungsstufen in diesem Fall alle den selben
-        Abstand.
+        Abstand. Daraus lässt sich herleiten, dass es sich um einen anderen Quantisier handelt als in der
+        Vorbereitungsaufgabe.\vspace{1em}
         
-        \TODO{Boris: überarbeiten} \\
-          hat daher
-        gleichmäßig verteilte Quantisierungsstufen.Hierbei handelt es sich offensichlich um eine lineare Kennlinie die gleichmäßig verteilte Quantisierungsschritte besitzt. Das lässt darauf schließen, dass die Daten aus der Vorbereitungsaufgabe und aus
-        dieser Aufgabe mit zwei verschiedenen Quantisierern moduliert wurden.\\
-        Bei der Messung wurde der Quantisierer so angesteuert, dass er seinen maximalen Bereich errecht. Dies lässt
-        sich an der sättigung erkennen, die bei $-2,4V$ und bei $2,6V$ beginnt. Dass diese beiden Startpunkte für die
-        Sättigung nicht Betragsmäßig gleich sind, spricht für einen unsymmetrischen Quantisierer.
-    
+        Bei der Bessung haben wir bewusst den maximalen Bereich des Quantisierers angesteuert. Auch das lässt sich in
+        der Kennlinie Erkennen. Wie in der Vorbereitungsaufgabe geht der Quanisierer sowohl für sehr hohe Werte als auch
+        für niedrige Werte in die Sättigung. Jedoch ist auch diese nicht symetrisch verteilt. Die untere
+        Sättigungsgrenze liegt bei $-2,4 V$ und die obere bei $2,6 V$. Auch in diesem Fall vermuten wir die Ursache in
+        dem Realen Bauteil.\vspace{1em}
+        
+        Genau wie bei der Vorbereitungsaufgabe lassen sich auch bei dieser Kennlinie mehrere Abtaststufen für eine
+        Spannungswert erkennen, die auf das selbe Phänomen zurückzuführen sind wie in der Vorbereitung.\\
+        Da sich auch hier eine Stufe bei $0 V$ erkenne lässt handelt es sich auch diesesmal um einen Midtread
+        Quantisierer.\vspace{1em}
+        
         
     \end{quote}  % Ende Subsection PCM Encoder-Kennlinie
     
