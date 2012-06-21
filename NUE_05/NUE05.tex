@@ -268,9 +268,31 @@
     
 \section{Labordurchführung}
 \begin{quote}
-         
 
+    \subsection{Aufgabe 2.1 - Bestimmen der PCM-Encoder-Kennlinie}
+    \begin{quote}
          
+         Bei diesem Aufgabenteil sollte die PCM-Encoder-Kennlinie des Quantisierers bestimmt werden, der in dem
+         Steckbrett eingebaut ist. Dazu haben wir ähnlich wie bei der Vorbereitungsaufgabe ein Quellsignal und das
+         dazugehörige Encodierte Signal abgespeichert.\\
+         Als Signal sollten wir ein Dreieckssignal mit einer Aplitude von ein wenig über $4V_{pp}$ verwenden. Diese
+         Amplitude sollen wir wählen, da der eingebaute Quantisierer auf ein Spannungsbereich von $\pm 2V$ ausgelegt
+         ist, und wir diesen Bereich komplett ausnutzen wollen.\\
+         Dieses Quellsignal lassen wir von dem PCM Encoder des Steckbretts modulieren. Dazu geben wir das Quellsignal
+         auf den Eingang des PCM Encoders sowie ein $100 kHz$ Rechtecksignal auf den Taktgeber des Encoders. Die beiden
+         Ausgänge PCM-Data sowie Framesynchonisation addieren wir und und greifen diesen Ausgang zum abspeichern ab.\\
+         
+         Diese abgespeicherten Daten analysieren wir mit unserem in der Vorbereitungsaufgabe geschriebenen Matlab-Skript
+         und errechnen uns die PCM-Kennlinie des Quentisierers. Die genaue Kennlinie ist in der Auswertung zu sehen.
+         
+         
+    \end{quote}  % Ende Subsection PCM Encoder-Kennlinie
+    
+    \subsection{Aufgabe 2.2 - Quantisierungsfehler}
+    \begin{quote}
+        \TODO{Aufgabe 2.2 einfügen} \\
+    \end{quote}  % Ende Subsection Quantisierungsfehler         
+
 \end{quote}%beende Labordurchführung
 
 %--------------------------------------------------------------------
@@ -297,11 +319,39 @@
         abgeschnitten wurden. Das erkennt man daran, dass die Kennlinie an diesen Werten in die Sättigung geht.\\
         Merkwürdig ist, dass die Kennlinie im unteren Bereich schon bei $-1.5V$ in die Sättigung geht und im oberen
         Bereich erst bei $2V$.\\
-        
+        Das kann entweder an einem Fehler in unserem Skript liegen oder einfach auf einen unsymmetrischen Quantisierer
+        zurückzuführen sein.
         
         \TODO{Kontrollieren ob dieses unsymmetrische verhalten richtig ist, oder ob da noch } \\
     
     \end{quote}  % Ende Subsection Vorbereitungsaufgabe
+    
+    \subsection{Aufgabe 2.1 - Bestimmen der PCM-Encoder-Kennlinie}
+    \begin{quote}
+        
+        Als nächstes betrachten wir die PCM-Encoder-Kennlinie, die wir aus der Messung in Aufgabe $2.1$ ermittelt haben.
+        
+        \begin{figure}[H]
+        \centering
+            \includegraphics[scale=0.7, trim = 2cm 7cm 1cm 9cm, clip]{./Bilder/Kennlinie_Aufgabe_2_1}
+                \caption{PCM-Encoder-Kennlinie Steckbrett}
+        \end{figure}
+        
+        Diese PCM-Encoder-Kennlinie unterscheidet sich auffällig von der aus der Vorbereitungsaufgabe. Hierbei
+        handelt es sich offensichlich um eine lineare Kennlinie die gleichmäßig verteilte
+        Quantisierungsschritte besitzt. Das lässt darauf schließen, dass die Daten aus der Vorbereitungsaufgabe und aus
+        dieser Aufgabe mit zwei verschiedenen Quantisierern moduliert wurden.\\
+        Bei der Messung wurde der Quantisierer so angesteuert, dass er seinen maximalen Bereich errecht. Dies lässt
+        sich an der sättigung erkennen, die bei $-2,4V$ und bei $2,6V$ beginnt. Dass diese beiden Startpunkte für die
+        Sättigung nicht Betragsmäßig gleich sind, spricht für einen unsymmetrischen Quantisierer.
+    
+        
+    \end{quote}  % Ende Subsection PCM Encoder-Kennlinie
+    
+    \subsection{Aufgabe 2.2 - Quantisierungsfehler}
+    \begin{quote}
+        \TODO{Aufgabe 2.2} \\
+    \end{quote}  % Ende Subsection Quantisierungsfehler
          	
 \end{quote}%beende Auswertung
 
@@ -311,7 +361,7 @@
 \section{Zusammenfassung}
 \begin{quote}
 
-
+    \TODO{Zusammenfassug schreiben} \\
 \end{quote}%beende Zusammenfassung
          
 
