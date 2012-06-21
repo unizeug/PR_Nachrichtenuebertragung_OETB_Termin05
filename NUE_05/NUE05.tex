@@ -104,11 +104,17 @@
 	Kanalcodierung des Übertragungskanal kann dabei für zusätzlichen Fehlerschutz
 	vor Übertragungsfehlern sorgen.\\
 	
-	\TODO{Abb. 9.2 - PCM-Übertragung aus dem Skript einfügen?}
+	\begin{figure}[H]
+    \centering
+        \includegraphics[scale=0.7, trim = 0cm 0cm 0cm 0cm, clip]{./Bilder/PCM-Uebertragung}
+            \caption{PCM-Uebertragung}
+            \cite{PCM-Uebertragung}
+    \end{figure}
+    
 	
 	Eine digitale Übertragung bietet viele Vorteile, wie zum Beispiel
 	\begin{itemize}
-		\item die Übertargungsqualität nimmt über weite Entfernungen durch den Einsatz
+		\item die Übertragungsqualität nimmt über weite Entfernungen durch den Einsatz
 		von Regenerativverstärkern nicht ab
 		\item die Multiplexbildung (z.B. TDM) ist vereinfacht
 		\item es ist eine Integration von digitaler Übertragung und digitaler
@@ -139,6 +145,7 @@
 	Quellencodierungen und mehrstufigen Übertragungen der Binärinformation nicht
 	mehr auftritt.\\
 	
+	\TODO{Frage: wo wurde das schon mal erwähnt?} \\
 	Wie bereits erwähnt, wird bei der PCM-Übertragung das analoge Signal mit einer
 	oberen Grenzfrequenz von $B_{Quelle}$ mit einer Abtastfrequenz von $f_T \geq 2
 	\cdot B_{Quelle}$ abgetastet, wodurch ein PAM Signal mit den Abtastwerten im
@@ -159,12 +166,17 @@
 	Zusammen ergeben der Abtaster, das Halteglied und der Quantisierer den
 	A/D-Wandler bei der Digitalisierung eines analogen Signals.\\
 	
-	\TODO{Abb. 9.3 - Digitalisierung eines analogen Signals aus dem Skript
-	einfügen?}
+	\begin{figure}[H]
+    \centering
+        \includegraphics[scale=0.7, trim = 0cm 0cm 0cm 0cm, clip]{./Bilder/Digitalisierung_des_Signals}
+            \caption{Blockschaltbild Digitalisierung eines Signals}
+            \cite{Digitalisierung_des_Signals}
+    \end{figure}
+    
 	
 	Übertragen werden diese wertdiskreten Signale durch den digitalen Kanal, der
-	sie bei fehlerfreier Übertraung eins zu eins an den Empfänger weitergibt. Dabei
-	umfasst der Kanal von der Umwandlung in binäre Signalelemente über die
+	sie bei fehlerfreier Übertragung eins zu eins an den Empfänger weitergibt. \TODO{was willst du mit dem nächsten satz
+	sagen?} \\Dabei umfasst der Kanal von der Umwandlung in binäre Signalelemente über die
 	Impulsformung und Modulation bishin zum Entscheider auf der Empfangsseite.\\
 	Für die Kanalbandbreite bei einer binären Übertragung eines PCM-modulierten
 	Signals und einer Bitrate von $R_{Bit} = f_T \cdot m \ \ \frac{bit}{s}$ gilt:
@@ -179,9 +191,8 @@
 	\vspace{0.5em}
 	    
 	Das $r$ entspricht dem Flankenfaktor, welcher einen Wert von $0 < r \leq 1$
-	annehmen kann. Man sieht, dass für eine fehlerfreie Übertragung eine
-	mindestens $m$-fache Bandbreite benötigt wird, als für eine analoge
-	Übertragung. Dieser kann aber wiederum verringert werden, wenn die $M$-wertigen
+	annehmen kann. Man sieht, dass für eine fehlerfreie Übertragung mindestens die
+	 $m$-fache Quellbandbreite benötigt wird. Dieser kann aber wiederum verringert werden, wenn die $M$-wertigen
 	Quantisierungsausgangswerte nicht in $m$ binäre Codewörter umgewandelt werden,
 	sondern in $N$-wertige Codewörter. Dadurch entsteht in der Rechnung ein
 	zusätzlicher Faktor, welcher die Kanalbandbreite reduziert:
@@ -200,7 +211,13 @@
 	umgewandelt, welche dann tiefpassgefiltert das ursprüngliche analoge Signal
 	ergeben.\\
 	
-	\TODO{Abb. 9.5-PCM Decodierung aus dem Skript einfügen?}
+	\begin{figure}[H]
+    \centering
+        \includegraphics[scale=0.7, trim = 0cm 0cm 0cm 0cm, clip]{./Bilder/PCM_Decodierung}
+            \caption{PCM Decodierung}
+            \cite{PCM_Decodierung}
+    \end{figure}
+    
 	
 	Die PCM-Übertragung ist nur einer von vielen Verfahren der
 	Digitalisierung, bei der eine Verringerung der notwendigen Bitrate möglich
@@ -272,12 +289,12 @@
 
 
 \begin{thebibliography}{999}
-% \bibitem {PrinzipSignalausblendung} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
-% Nachrichtenübertragung, S.257
-%\bibitem {AmplitudenspektrumShap_Top} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
-% Nachrichtenübertragung, S.258
-%\bibitem {Amplitudenspektrum_Flat_Top} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
-% Nachrichtenübertragung, S.259
+ \bibitem {PCM-Uebertragung} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
+ Nachrichtenübertragung, S.272
+\bibitem {Digitalisierung_des_Signals} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
+ Nachrichtenübertragung, S.273
+\bibitem {PCM_Decodierung} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
+ Nachrichtenübertragung, S.276
  
 
 
