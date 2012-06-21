@@ -133,19 +133,19 @@ xlabel('Spannung [V]');
 ylabel('Abtaststufe');
 axis([-2.5 2.5 0 274]);
 
-figure(2);
-stem(DecVal,VoltVal);
-xlabel('Abtaststufe');
-ylabel('Spannung [V]');
-axis([0 255 -2.5 2.5]);
-
-figure(11);
-stem(Data);
-hold on
-stem(WortStart2+0.0001,'r')
-stem(Bitindex+0.00005,'g');
-stem(Bitist1+0.000025,'c');
-hold off
+% figure(2);
+% stem(DecVal,VoltVal);
+% xlabel('Abtaststufe');
+% ylabel('Spannung [V]');
+% axis([0 255 -2.5 2.5]);
+% 
+% figure(11);
+% stem(Data);
+% hold on
+% stem(WortStart2+0.0001,'r')
+% stem(Bitindex+0.00005,'g');
+% stem(Bitist1+0.000025,'c');
+% hold off
 % 
 % figure(12);
 % hold on

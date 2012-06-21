@@ -242,8 +242,6 @@
 	machen und uns ein Blockschaltbild erarbeiten, welches den Aufbau realsieren
 	könnte.\\
 	
-	\TODO{Blockschaltbild einfügen}
-	
 	Zuletzt sollte das in der Vorgabe gegebene MATLAB Skript PCM\_Analyse.m so
 	vervollständigt werden, dass die Datei bei der Ausführung automatisch die
 	PCM-Encoder-Kennlinie bestimmt. Der Code konnte anhand der Datei
@@ -286,8 +284,16 @@
          ``Split'' die beiden Signale voneinander trennen.
          
          Diese abgespeicherten Daten analysieren wir mit unserem in der Vorbereitungsaufgabe geschriebenen Matlab-Skript
-         und errechnen uns die PCM-Kennlinie des Quentisierers. Die genaue Kennlinie ist in der Auswertung zu sehen.
+         und errechnen uns die PCM-Kennlinie des Quentisierers. Die genaue Kennlinie ist in der Auswertung zu
+         sehen.\vspace{1em}
          
+         Der genau Aufbau sah folgendermaßen aus:
+         \begin{figure}[H]
+            \centering
+                \includegraphics[scale=0.2, trim = 0cm 0cm 0cm 0cm, clip]{./Bilder/Aufgabe_2_1}
+                    \caption{Aufbau Aufgabe 2.1}
+            \end{figure}
+    
          
     \end{quote}  % Ende Subsection PCM Encoder-Kennlinie
     
@@ -316,15 +322,22 @@
         \end{figure}
         
         Es fällt auf, dass es sich bei dieser Kennlinie um eine nichtlinieare Kennlinie handlet. Der Spannungsbereich um
-        $0V$ ist wesentlich höher aufgelöst als an den Rändern der Kennlinie. Das liegt daran, dass die
-        Quantisierungsstufen nicht gleichmäßig verteilt sind.\\
-        des weiteren fällt auf, dass sowohl am unteren Bereich der Kennlinie als auch am oberen Bereich einige Messwerde
-        abgeschnitten wurden. Das erkennt man daran, dass die Kennlinie an diesen Werten in die Sättigung geht.\\
-        Merkwürdig ist, dass die Kennlinie im unteren Bereich schon bei $-1.5V$ in die Sättigung geht und im oberen
-        Bereich erst bei $2V$.\\
-        Das kann entweder an einem Fehler in unserem Skript liegen oder einfach auf einen unsymmetrischen Quantisierer
-        zurückzuführen sein.
+        $0V$ ist wesentlich höher aufgelöst als an den Rändern der Kennlinie. Mit anderen Worten, die
+        Quantisierungsstufen liegen um $0V$ dichter beieinander als bei $\pm 1.5V$.\\
+        Ein solcher Quantisierer kann interessant sein wenn es einen besondern Bereich innerhalb des Nutzsignals gibt,
+        der mit höherer Auflösung übertragen werden soll als andere. Als Konsequenz verschlechtert sich dadurch
+        automatisch die Auflösung des randbereichs, da ja nicht mehr Bits bzw. Stufen zur verfügung
+        stehen. Als Konsequenz wird der Quantisierungsfehler im hochaufgelösten Bereich kleiner und beim
+        niedrig Aufgelösten Bereich größer als bei gleichverteilten Quantisierungsstufen.\vspace{1em}
         
+        Weiter lässt sich bei der Kennlinie beobachten, dass sowohl am unteren als auch am oberen Bereich der
+        Kennlinie die Messwerte abflachen und auf dem Wert $0$ bzw. $255$ bleiben. In beiden Fällen gerät der
+        Quantisierer in die Sättigung und sendet den minimalen bzw. den maximal möglichen Wert.\\
+        Auffallend ist, dass die Grenzen für die der Quantisierer in Sättigung geht nicht symmetrisch sind. Im unteren
+        Bereich geht der Quantisierer schon für $-1,6 V$ in Sättigung während er im oberen Bereich für $2 V$ in
+        Sättigung geht.\\
+        Die Ursache dafür vermuten wir in dem Quantisierer, der nunmal nicht ideal arbeitet sondern eben real umgesetzt
+        ist.\\
         \TODO{Kontrollieren ob dieses unsymmetrische verhalten richtig ist, oder ob da noch } \\
     
     \end{quote}  % Ende Subsection Vorbereitungsaufgabe
@@ -340,9 +353,12 @@
                 \caption{PCM-Encoder-Kennlinie Steckbrett}
         \end{figure}
         
-        Diese PCM-Encoder-Kennlinie unterscheidet sich auffällig von der aus der Vorbereitungsaufgabe. Hierbei
-        handelt es sich offensichlich um eine lineare Kennlinie die gleichmäßig verteilte
-        Quantisierungsschritte besitzt. Das lässt darauf schließen, dass die Daten aus der Vorbereitungsaufgabe und aus
+        Diese PCM-Encoder-Kennlinie unterscheidet sich auffällig von der aus der Vorbereitungsaufgabe.
+        Sie ist offensichtlich linear und die Abstände zwischen den Quantisierungsstufen sind gleich groß. Das 
+        
+        \TODO{Boris: überarbeiten} \\
+          hat daher
+        gleichmäßig verteilte Quantisierungsstufen.Hierbei handelt es sich offensichlich um eine lineare Kennlinie die gleichmäßig verteilte Quantisierungsschritte besitzt. Das lässt darauf schließen, dass die Daten aus der Vorbereitungsaufgabe und aus
         dieser Aufgabe mit zwei verschiedenen Quantisierern moduliert wurden.\\
         Bei der Messung wurde der Quantisierer so angesteuert, dass er seinen maximalen Bereich errecht. Dies lässt
         sich an der sättigung erkennen, die bei $-2,4V$ und bei $2,6V$ beginnt. Dass diese beiden Startpunkte für die
