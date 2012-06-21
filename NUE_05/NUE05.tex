@@ -275,12 +275,15 @@
          Bei diesem Aufgabenteil sollte die PCM-Encoder-Kennlinie des Quantisierers bestimmt werden, der in dem
          Steckbrett eingebaut ist. Dazu haben wir ähnlich wie bei der Vorbereitungsaufgabe ein Quellsignal und das
          dazugehörige Encodierte Signal abgespeichert.\\
-         Als Signal sollten wir ein Dreieckssignal mit einer Aplitude von ein wenig über $4V_{pp}$ verwenden. Diese
-         Amplitude sollen wir wählen, da der eingebaute Quantisierer auf ein Spannungsbereich von $\pm 2V$ ausgelegt
+         Als Signal sollten wir ein Dreieckssignal mit einer Aplitude von ein wenig über $4 V_{pp}$ verwenden. Diese
+         Amplitude sollen wir wählen, da der eingebaute Quantisierer auf ein Spannungsbereich von $\pm 2 V$ ausgelegt
          ist, und wir diesen Bereich komplett ausnutzen wollen.\\
          Dieses Quellsignal lassen wir von dem PCM Encoder des Steckbretts modulieren. Dazu geben wir das Quellsignal
          auf den Eingang des PCM Encoders sowie ein $100 kHz$ Rechtecksignal auf den Taktgeber des Encoders. Die beiden
          Ausgänge PCM-Data sowie Framesynchonisation addieren wir und und greifen diesen Ausgang zum abspeichern ab.\\
+         Damit das PCM-Signal später von dem Rahmen getrennt werden kann achten wir darauf, dass die Aplitude des PCM
+         Signals $5 V$ beträgt und die Amplitude des Rahmensignals $8 V$. Auf diese Weise kann das Matlab Skript
+         ``Split'' die beiden Signale voneinander trennen.
          
          Diese abgespeicherten Daten analysieren wir mit unserem in der Vorbereitungsaufgabe geschriebenen Matlab-Skript
          und errechnen uns die PCM-Kennlinie des Quentisierers. Die genaue Kennlinie ist in der Auswertung zu sehen.
