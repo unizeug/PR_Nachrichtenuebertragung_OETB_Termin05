@@ -2,13 +2,13 @@
 clear;
 clear all;
 close all;
-%load('pcm_data_test.mat')
-load('dreieckflanken');
+load('pcm_data_test.mat')
+%load('dreieckflanken');
 % A... Spannungssignal
 % B... Bitwörter+Rahmensynchronisationssignal
 
 %Filter Kanal B
-B_filt=-1*PerfectTP(B,1/Tinterval,200e3);
+B_filt=PerfectTP(B,1/Tinterval,200e3);
 % Split gefilterten Kanal B
 [Data Rahmen]=Split(B_filt);
 % Data bereinigen:
@@ -131,16 +131,21 @@ figure(1);
 stem(VoltVal,DecVal);
 xlabel('Spannung [V]');
 ylabel('Abtaststufe');
-%axis([-2 2 0 258]);
+axis([-2.5 2.5 0 274]);
 
+figure(2);
+stem(DecVal,VoltVal);
+xlabel('Abtaststufe');
+ylabel('Spannung [V]');
+axis([0 255 -2.5 2.5]);
 
-% figure(11);
-% stem(Data);
-% hold on
-% stem(WortStart2+0.0001,'r')
-% stem(Bitindex+0.00005,'g');
-% stem(Bitist1+0.000025,'c');
-% hold off
+figure(11);
+stem(Data);
+hold on
+stem(WortStart2+0.0001,'r')
+stem(Bitindex+0.00005,'g');
+stem(Bitist1+0.000025,'c');
+hold off
 % 
 % figure(12);
 % hold on

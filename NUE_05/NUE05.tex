@@ -247,9 +247,18 @@
 	Zuletzt sollte das in der Vorgabe gegebene MATLAB Skript PCM\_Analyse.m so
 	vervollständigt werden, dass die Datei bei der Ausführung automatisch die
 	PCM-Encoder-Kennlinie bestimmt. Der Code konnte anhand der Datei
-	pcm\_data\_test.mat getestet und kontrolliert werden. 
+	pcm\_data\_test.mat getestet und kontrolliert werden. \\
 	
-	\TODO{Kennlinie einfügen und beschreiben}
+	Die erste Herausforderung war es den Anfang eines Bitwortes zu bestimmen. Dazu haben wir den Vektor Rahmen genommen,
+	der auf dem letzten Bit eines Wortes ein High Pegel sendet. Diesen haben wir so um eine Stelle nach links
+	verschoben und anschließend von sich selbst abgezogen, so dass er ausschließlich zu Beginn eines
+	neuen Bitwortes eine $1$ sendet.\\
+	Anschließend haben wir alle Bitwörter nacheinander bearbeitet und die Zahl der Abtastwerte und deren Wert den $8$ Bit
+	eines jeden Bitwortes zugeordnet.
+	Zum Schluss haben wir noch die binären Werte in Decimalwerte umgerechnet und den jeweiligen originalen Spannungswert
+	aus den Messwerten bestimmt.\\
+	Diese beiden Vektoren zueinander geplottet ergeben die PCM-Encoder-Kennlinie. Die Kennlinie selbst betrachten wir in
+	der Auswertung genauer.
 	
 \end{quote}%Theorie beenden
 
@@ -270,7 +279,29 @@
     
 \section{Auswertung}
 \begin{quote}
-
+    
+    \subsection{Vorbereitungsaufgabe}
+    \begin{quote}
+        Nun betrachten wir die in der Vorbereitungsaufgabe ermittelte PCM-Encoder-Kennlinie.
+        
+        \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.7, trim = 2cm 7cm 1cm 9cm, clip]{./Bilder/Kennlinie_Vorbereitungsaufgabe}
+            \caption{PCM-Encoder-Kennlinie Vorbereitungsaufgabe}
+        \end{figure}
+        
+        Es fällt auf, dass es sich bei dieser Kennlinie um eine nichtlinieare Kennlinie handlet. Der Spannungsbereich um
+        $0V$ ist wesentlich höher aufgelöst als an den Rändern der Kennlinie. Das liegt daran, dass die
+        Quantisierungsstufen nicht gleichmäßig verteilt sind.\\
+        des weiteren fällt auf, dass sowohl am unteren Bereich der Kennlinie als auch am oberen Bereich einige Messwerde
+        abgeschnitten wurden. Das erkennt man daran, dass die Kennlinie an diesen Werten in die Sättigung geht.\\
+        Merkwürdig ist, dass die Kennlinie im unteren Bereich schon bei $-1.5V$ in die Sättigung geht und im oberen
+        Bereich erst bei $2V$.\\
+        
+        
+        \TODO{Kontrollieren ob dieses unsymmetrische verhalten richtig ist, oder ob da noch } \\
+    
+    \end{quote}  % Ende Subsection Vorbereitungsaufgabe
          	
 \end{quote}%beende Auswertung
 
