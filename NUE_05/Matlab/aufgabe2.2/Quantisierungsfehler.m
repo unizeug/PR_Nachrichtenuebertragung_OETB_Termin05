@@ -3,15 +3,15 @@ clear; close all;
 %Messungen laden
 %Kanal B=Eingangssignal, Kanal A=decodiertes Signal
 
-sinus100 = load('sinus_clk100kHz');
+sinus8 = load('sinus_clk8kHz');
 % sinus100 = load('sinus_clk100kHz');
 % 
 % dreieck8 = load('dreieck_clk8kHz');
 % dreieck100 = load('dreieck_clk100kHz');
 
 %Mittelwertbefreiung
-a = sinus100.A;
-b = sinus100.B;
+a = sinus8.A;
+b = sinus8.B;
 
 a = a-mean(a);
 b = b-mean(b);
@@ -20,18 +20,18 @@ b = b-mean(b);
 %und Signale entsprechend zuschneiden
 faktor = max(b)/max(a);
 a = a*faktor;
-% 
-% figure(1);
-% plot(a);
-% hold on
-% plot(b, 'r');
-% hold off
-% AXIS([0 3500 -1.5 2]);
-% xlabel('Zeitachse t');
-% ylabel('Amplitude V');
-% SUPTITLE(['\bf Eingangssignal und decodiertes, amplitudenangepasstes Signal',10]);
-% legend('Eingangssignal','decodiertes, amplitudenangepasstes Signal');
-% 
+
+figure(1);
+plot(a);
+hold on
+plot(b, 'r');
+hold off
+AXIS([0 3500 -1.5 2]);
+xlabel('Zeitachse t');
+ylabel('Amplitude V');
+SUPTITLE(['\bf Eingangssignal und decodiertes, amplitudenangepasstes Signal',10]);
+legend('Eingangssignal','decodiertes, amplitudenangepasstes Signal');
+
 
 %minimale zeitliche Verschiebung finden
 [xr,lag]=xcorr(a,b);
