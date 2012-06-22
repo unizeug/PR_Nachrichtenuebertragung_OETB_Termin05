@@ -299,7 +299,32 @@
     
     \subsection{Aufgabe 2.2 - Quantisierungsfehler}
     \begin{quote}
-        \TODO{Aufgabe 2.2 einfügen} \\
+       
+       In der zweiten Aufgabe im Praktikum sollte der Quantisierungsfehler einer
+       PCM-Übertragungsstrecke bestimmt werden. Dafür wurde zunächst die
+       Einstellungen am Oszilloskop auf $5\frac{ms}{div}$ und auf $5ks$
+       gestellt. Es wurde jeweils ein Sinusquellsignal und ein
+       Dreieckquellsignal mit einer Clockfrequenz von $8kHz$ und $100kHz$ zuerst
+       codiert und anschließend im Decoder des ETT decodiert und ohne
+       rekonstruierenden Tiefpass mit dem Eingangssignal in den Vergleich
+       gesetzt. Für Encoder und Decoder wurde für jede Messung die selbe
+       Taktfrequenz verwendet. Außerdem führten die FS- und die PCM Data Signale
+       des Encoders direkt in die entsprechenden Eingänge des Decoders. Der
+       Aufbau ist auf diesem Bild nachvollziehbar:
+       
+       \TODO{Bild vom 2.Aufbau einbinden}
+       
+       Mit den gemessenen Eingangs- und Ausgangssignalen konnte anhand der von
+       uns erweiterten Datei Quantisierungsfehler.m der Quantisierungsfehler
+       bestimmt und als Histogramm mit $10$ gleich großen Bins in
+       einem Bereich von $\pm 0.3V$ dargestellt werden. Wichtig dabei war es,
+       beide Signale zuerst mittelwertfrei und amplitudengleich zu richten.
+       Außerdem musste mithilfe einer Kreuzkorrelation der zeitliche Verschub
+       beider Signale ermittelt und kompensiert werden.\\
+       
+       Zuletzt wurde noch das Leistungsdichtespektrum (LDS) des
+       Quantisierungsfehlers untersucht.
+       
     \end{quote}  % Ende Subsection Quantisierungsfehler         
 
 \end{quote}%beende Labordurchführung
