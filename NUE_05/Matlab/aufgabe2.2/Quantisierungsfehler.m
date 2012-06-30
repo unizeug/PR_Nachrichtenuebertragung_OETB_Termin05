@@ -3,7 +3,7 @@ clear; close all;
 %Messungen laden
 %Kanal B=Eingangssignal, Kanal A=decodiertes Signal
 
-sinus8 = load('sinus_clk8kHz');
+sinus8 = load('sinus_clk100kHz');
 % sinus100 = load('sinus_clk100kHz');
 % 
 % dreieck8 = load('dreieck_clk8kHz');
