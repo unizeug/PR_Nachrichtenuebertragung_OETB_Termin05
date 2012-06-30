@@ -3,15 +3,15 @@ clear; close all;
 %Messungen laden
 %Kanal B=Eingangssignal, Kanal A=decodiertes Signal
 
-sinus8 = load('sinus_clk8kHz');
-% sinus100 = load('sinus_clk100kHz');
+%sinus8 = load('sinus_clk8kHz');
+ sinus100 = load('sinus_clk100kHz');
 % 
 % dreieck8 = load('dreieck_clk8kHz');
 % dreieck100 = load('dreieck_clk100kHz');
 
 %Mittelwertbefreiung
-a = sinus8.A;
-b = sinus8.B;
+a = sinus100.A;
+b = sinus100.B;
 
 a = a-mean(a);
 b = b-mean(b);
