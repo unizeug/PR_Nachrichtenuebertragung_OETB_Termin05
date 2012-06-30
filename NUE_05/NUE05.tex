@@ -422,7 +422,69 @@
     
     \subsection{Aufgabe 2.2 - Quantisierungsfehler}
     \begin{quote}
-        \TODO{Aufgabe 2.2} \\
+        Die Ergebnisse der Messung aus Aufgabe 2 ergaben für das Sinussignal mit
+        einer Clockfrequenz von $100 kHz$ folgende Plots. Zuerst werden die
+        mittelwertfreien Sende- und Empfangssignale bezüglich, Amplitude und
+        Zeitverschiebung aufeinander angepasst. Danach wird der
+        Quantisierungsfehler und dessen Histogramm gebildet:
+        \begin{center}
+            \begin{tabular}{ll}
+            
+            \hspace{-4cm}
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                        8.5cm, clip]
+                        {./Bilder/sin100_Eingang_vs_DecodiertAmpl-angepasst}
+                          \caption{Eingangssignal und decodiert,
+                          amplitudenangepasstes Signal}
+                    \end{figure}
+                \end{minipage}
+                
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                        8.5cm, clip]
+                        {./Bilder/sin100_Eingang_vs_korrektDecodiert}
+                          \caption{Eingangssignal und korrekt decodiertes
+                          Ausgangssignal}
+                    \end{figure}
+                \end{minipage}
+            
+            \end{tabular}
+        \end{center}
+        
+        
+        
+        \begin{center}
+            \begin{tabular}{ll}
+            
+            \hspace{-4cm}
+                
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.5, trim = 1.6cm 7cm 1.6cm
+                        8.5cm, clip]
+                        {./Bilder/sin100_Quantisierungsfehler}
+                          \caption{Quntisierungsfehler des Sinussignals mit
+                          100kHz Taktsignal}
+                    \end{figure}
+                \end{minipage}
+                              
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.5, trim = 1.6cm 7cm 1.6cm
+                        8.5cm, clip]
+                        {./Bilder/sin100_Histogramm}
+                          \caption{Histogramm des entsprechenden
+                          Quantisierungsfehlers}
+                    \end{figure}
+                \end{minipage}
+            
+            \end{tabular}
+        \end{center}
+        
+        
     \end{quote}  % Ende Subsection Quantisierungsfehler
          	
 \end{quote}%beende Auswertung
