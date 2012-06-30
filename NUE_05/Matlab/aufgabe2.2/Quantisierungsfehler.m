@@ -3,17 +3,17 @@ clear; close all;
 %Messungen laden
 %Kanal B=Eingangssignal, Kanal A=decodiertes Signal
 
-% sinus8 = load('sinus_clk8kHz');
+sinus8 = load('sinus_clk8kHz');
 % sinus100 = load('sinus_clk100kHz');
 
 % dreieck8 = load('dreieck_clk8kHz');
-dreieck100 = load('dreieck_clk100kHz');
+% dreieck100 = load('dreieck_clk100kHz');
 
 %Mittelwertbefreiung
-a = dreieck100.A;
-b = dreieck100.B;
+a = sinus8.A;
+b = sinus8.B;
 
-a(832) = a(835);     %Fuschkorrektur
+% a(3710) = a(3720);     %Fuschkorrektur
 % a(1085) = -1.0480;    %Fuschkorrektur
 a = a-mean(a);
 b = b-mean(b);
@@ -36,25 +36,25 @@ legend('Eingangssignal','decodiertes, amplitudenangepasstes Signal');
 
 
 %minimale zeitliche Verschiebung finden
-[xr,lag]=xcorr(a,b);
-[mx,mind]=max(abs(xr));
-delay_eva=lag(mind);
+% [xr,lag]=xcorr(a,b);
+% [mx,mind]=max(abs(xr));
+% delay_eva=lag(mind);
 
-% [c,lags] = xcorr(a,b);
-% index_center=(length(c)+1)./2;
-% [c,index_max]=max(c);
-% delay=index_max-index_center
+[c,lags] = xcorr(a,b);
+index_center=(length(c)+1)./2;
+[c,index_max]=max(c);
+delay=index_max-index_center
 
 
-t = (1:length(a)-delay_eva);
-% t = (1:length(a)-delay);
+% t = (1:length(a)-delay_eva);
+t = (1:length(a)-delay);
 
 figure(2);
-plot(t,a(delay_eva+1:end))
-% plot(t,a(delay+1:end))
+% plot(t,a(delay_eva+1:end))
+plot(t,a(delay+1:end))
 hold on
-plot(t,b(1:end-delay_eva),'r')
-% plot(t,b(1:end-delay),'r')
+% plot(t,b(1:end-delay_eva),'r')
+plot(t,b(1:end-delay),'r')
 hold off
 AXIS([0 3500 -1.5 2]);
 xlabel('Zeitachse t');
