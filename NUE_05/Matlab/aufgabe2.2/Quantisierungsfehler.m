@@ -6,7 +6,7 @@ clear; close all;clc;
 sinus = load('sinus_clk8kHz');
 sinus.B = -1*sinus.B;
 
-%sinus = load('sinus_clk100kHz');
+sinus = load('sinus_clk100kHz');
 
 % dreieck8 = load('dreieck_clk8kHz');
 % dreieck100 = load('dreieck_clk100kHz');
@@ -97,5 +97,8 @@ SUPTITLE(['\bf Histogramm des Quantisierungsfehlers', 10]);
 
 [qfauto,lag]=xcorr(qf,qf);
 
+f_T=100000; % oder =8000
+T_ges=sinus.Tinterval*sinus.Length;
 
-%FFTshiftplotZP_autocorr
+FFTshiftplotZP_autocorr(qfauto, T_ges, f_T,4,'b', 5,-750,750)
+
