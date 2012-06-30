@@ -4,14 +4,14 @@ clear; close all;
 %Kanal B=Eingangssignal, Kanal A=decodiertes Signal
 
 % sinus8 = load('sinus_clk8kHz');
-sinus100 = load('sinus_clk100kHz');
+% sinus100 = load('sinus_clk100kHz');
 
 % dreieck8 = load('dreieck_clk8kHz');
-% dreieck100 = load('dreieck_clk100kHz');
+dreieck100 = load('dreieck_clk100kHz');
 
 %Mittelwertbefreiung
-a = sinus100.A;
-b = sinus100.B;
+a = dreieck100.A;
+b = dreieck100.B;
 
 a(832) = a(835);     %Fuschkorrektur
 % a(1085) = -1.0480;    %Fuschkorrektur
