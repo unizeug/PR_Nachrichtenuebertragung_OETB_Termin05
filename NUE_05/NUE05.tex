@@ -290,7 +290,8 @@
          Der genau Aufbau sah folgendermaßen aus:
          \begin{figure}[H]
             \centering
-                \includegraphics[scale=0.2, trim = 0cm 0cm 0cm 0cm, clip]{./Bilder/Aufgabe_2_1}
+                \includegraphics[scale=0.17, trim = 0cm 0cm 0cm 0cm,
+                clip]{./Bilder/Aufgabe_2_1}
                     \caption{Aufbau Aufgabe 2.1}
             \end{figure}
     
@@ -299,7 +300,37 @@
     
     \subsection{Aufgabe 2.2 - Quantisierungsfehler}
     \begin{quote}
-        \TODO{Aufgabe 2.2 einfügen} \\
+       
+       In der zweiten Aufgabe im Praktikum sollte der Quantisierungsfehler einer
+       PCM-Übertragungsstrecke bestimmt werden. Dafür wurde zunächst die
+       Einstellungen am Oszilloskop auf $5\frac{ms}{div}$ und auf $5ks$
+       gestellt. Es wurde jeweils ein Sinusquellsignal und ein
+       Dreieckquellsignal mit einer Clockfrequenz von $8kHz$ und $100kHz$ zuerst
+       codiert und anschließend im Decoder des ETT decodiert und ohne
+       rekonstruierenden Tiefpass mit dem Eingangssignal in den Vergleich
+       gesetzt. Für Encoder und Decoder wurde für jede Messung die selbe
+       Taktfrequenz verwendet. Außerdem führten die FS- und die PCM Data Signale
+       des Encoders direkt in die entsprechenden Eingänge des Decoders. Der
+       Aufbau ist auf diesem Bild nachvollziehbar:
+       
+       \begin{figure}[H]
+            \centering
+                \includegraphics[scale=0.17, trim = 0cm 0cm 0cm 0cm,
+                clip]{./Bilder/Aufgabe_2_2}
+                    \caption{Aufbau Aufgabe 2.2}
+       \end{figure}
+       
+       Mit den gemessenen Eingangs- und Ausgangssignalen konnte anhand der von
+       uns erweiterten Datei Quantisierungsfehler.m der Quantisierungsfehler
+       bestimmt und als Histogramm mit $10$ gleich großen Bins in
+       einem Bereich von $\pm 0.3V$ dargestellt werden. Wichtig dabei war es,
+       beide Signale zuerst mittelwertfrei und amplitudengleich zu richten.
+       Außerdem musste mithilfe einer Kreuzkorrelation der zeitliche Verschub
+       beider Signale ermittelt und kompensiert werden.\\
+       
+       Zuletzt wurde noch das Leistungsdichtespektrum (LDS) des
+       Quantisierungsfehlers untersucht.
+       
     \end{quote}  % Ende Subsection Quantisierungsfehler         
 
 \end{quote}%beende Labordurchführung
@@ -391,7 +422,128 @@
     
     \subsection{Aufgabe 2.2 - Quantisierungsfehler}
     \begin{quote}
-        \TODO{Aufgabe 2.2} \\
+        Die Ergebnisse der Messung aus Aufgabe 2 ergaben für das Sinussignal mit
+        einer Clockfrequenz von $100 kHz$ folgende Plots. Zuerst werden die
+        mittelwertfreien Sende- und Empfangssignale bezüglich, Amplitude und
+        Zeitverschiebung aufeinander angepasst. Danach wird der
+        Quantisierungsfehler und dessen Histogramm gebildet:
+        \begin{center}
+            \begin{tabular}{ll}
+            
+            \hspace{-4cm}
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                        8.5cm, clip]
+                        {./Bilder/sin100_Eingang_vs_DecodiertAmpl-angepasst}
+                          \caption{Eingangssignal und decodiert,
+                          amplitudenangepasstes Signal}
+                    \end{figure}
+                \end{minipage}
+                
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                        8.5cm, clip]
+                        {./Bilder/sin100_Eingang_vs_korrektDecodiert}
+                          \caption{Eingangssignal und korrekt decodiertes
+                          Ausgangssignal}
+                    \end{figure}
+                \end{minipage}
+            
+            \end{tabular}
+        \end{center}
+        
+        
+        
+        \begin{center}
+            \begin{tabular}{ll}
+            
+            \hspace{-4cm}
+                
+                \begin{minipage}{0.55\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.55, trim = 3cm 9cm 1.6cm
+                        8.5cm, clip]
+                        {./Bilder/sin100_Quantisierungsfehler}
+                          \caption{Quntisierungsfehler (Sinus, 100kHz clk)}
+                    \end{figure}
+                \end{minipage}
+                              
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.55, trim = 1.6cm 9cm 1.6cm
+                        8.5cm, clip]
+                        {./Bilder/sin100_Histogramm}
+                          \caption{Histogramm des Quantisierungsfehlers}
+                    \end{figure}
+                \end{minipage}
+            
+            \end{tabular}
+        \end{center}
+        
+        \TODO{Plots erklären, was zum Quantisierungsfehler sagen}
+        
+        Nun betrachten wir die Plots der Messung eines Dreiecksignal, ebenfalls
+        mit einer Taktfrequenz von zunächst $100 kHz$:
+        \begin{center}
+            \begin{tabular}{ll}
+            
+            \hspace{-4cm}
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                        8.5cm, clip]
+                        {./Bilder/drei100_Eingang_vs_DecodiertAmpl-angepasst}
+                          \caption{Eingangssignal und decodiert,
+                          amplitudenangepasstes Signal}
+                    \end{figure}
+                \end{minipage}
+                
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                        8.5cm, clip]
+                        {./Bilder/drei100_Eingang_vs_korrektDecodiert}
+                          \caption{Eingangssignal und korrekt decodiertes
+                          Ausgangssignal}
+                    \end{figure}
+                \end{minipage}
+            
+            \end{tabular}
+        \end{center}
+        
+        
+        
+        \begin{center}
+            \begin{tabular}{ll}
+            
+            \hspace{-4cm}
+                
+                \begin{minipage}{0.55\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.55, trim = 3cm 9cm 1.6cm
+                        8.5cm, clip]
+                        {./Bilder/drei100_Quantisierungsfehler}
+                          \caption{Quntisierungsfehler (Dreieck, 100kHz clk)}
+                    \end{figure}
+                \end{minipage}
+                              
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.55, trim = 1.6cm 9cm 1.6cm
+                        8.5cm, clip]
+                        {./Bilder/drei100_Histogramm}
+                          \caption{Histogramm des Quantisierungsfehlers}
+                    \end{figure}
+                \end{minipage}
+            
+            \end{tabular}
+        \end{center}
+        
+        \TODO{Plots erklären, was zum Quantisierungsfehler sagen}
+        
+        
     \end{quote}  % Ende Subsection Quantisierungsfehler
          	
 \end{quote}%beende Auswertung
