@@ -12,7 +12,7 @@
 
 
 \newcommand{\pdftitle}{Nachrichten\"ubertragung\ Praktikum\ 05}
-\newcommand{\prototitle}{Praktikum 05 \\ HIER MUSS NOCH DER TITEL HIN}
+\newcommand{\prototitle}{Praktikum 05 \\ Pulscodemodulation ud Quantisierung}
 
 
 \input{../../packages/tu_header_8}
@@ -461,28 +461,87 @@
             
             \hspace{-4cm}
                 
-                \begin{minipage}{0.6\textwidth}
+                \begin{minipage}{0.55\textwidth}
                     \begin{figure}[H]
-                        \includegraphics[scale=0.5, trim = 1.6cm 7cm 1.6cm
+                        \includegraphics[scale=0.55, trim = 3cm 9cm 1.6cm
                         8.5cm, clip]
                         {./Bilder/sin100_Quantisierungsfehler}
-                          \caption{Quntisierungsfehler des Sinussignals mit
-                          100kHz Taktsignal}
+                          \caption{Quntisierungsfehler (Sinus, 100kHz clk)}
                     \end{figure}
                 \end{minipage}
                               
                 \begin{minipage}{0.6\textwidth}
                     \begin{figure}[H]
-                        \includegraphics[scale=0.5, trim = 1.6cm 7cm 1.6cm
+                        \includegraphics[scale=0.55, trim = 1.6cm 9cm 1.6cm
                         8.5cm, clip]
                         {./Bilder/sin100_Histogramm}
-                          \caption{Histogramm des entsprechenden
-                          Quantisierungsfehlers}
+                          \caption{Histogramm des Quantisierungsfehlers}
                     \end{figure}
                 \end{minipage}
             
             \end{tabular}
         \end{center}
+        
+        \TODO{Plots erklären, was zum Quantisierungsfehler sagen}
+        
+        Nun betrachten wir die Plots der Messung eines Dreiecksignal, ebenfalls
+        mit einer Taktfrequenz von zunächst $100 kHz$:
+        \begin{center}
+            \begin{tabular}{ll}
+            
+            \hspace{-4cm}
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                        8.5cm, clip]
+                        {./Bilder/drei100_Eingang_vs_DecodiertAmpl-angepasst}
+                          \caption{Eingangssignal und decodiert,
+                          amplitudenangepasstes Signal}
+                    \end{figure}
+                \end{minipage}
+                
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                        8.5cm, clip]
+                        {./Bilder/drei100_Eingang_vs_korrektDecodiert}
+                          \caption{Eingangssignal und korrekt decodiertes
+                          Ausgangssignal}
+                    \end{figure}
+                \end{minipage}
+            
+            \end{tabular}
+        \end{center}
+        
+        
+        
+        \begin{center}
+            \begin{tabular}{ll}
+            
+            \hspace{-4cm}
+                
+                \begin{minipage}{0.55\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.55, trim = 3cm 9cm 1.6cm
+                        8.5cm, clip]
+                        {./Bilder/drei100_Quantisierungsfehler}
+                          \caption{Quntisierungsfehler (Dreieck, 100kHz clk)}
+                    \end{figure}
+                \end{minipage}
+                              
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.55, trim = 1.6cm 9cm 1.6cm
+                        8.5cm, clip]
+                        {./Bilder/drei100_Histogramm}
+                          \caption{Histogramm des Quantisierungsfehlers}
+                    \end{figure}
+                \end{minipage}
+            
+            \end{tabular}
+        \end{center}
+        
+        \TODO{Plots erklären, was zum Quantisierungsfehler sagen}
         
         
     \end{quote}  % Ende Subsection Quantisierungsfehler
