@@ -546,7 +546,64 @@
         
         \TODO{Plots erklären, was zum Quantisierungsfehler sagen}
         
+        \subsubsection{Leistungsdichtespektrum des Quantisierungsfehlers}
+		\begin{quote}
+		
+		Ein Leistungsdichtespektrum beschreibt die Verteilung der Leistung über der Frequenz und wird als
+		Fouriertransformation der Autokorrelationsfunktion eines stationären stochastischen Prozesses definiert.\cite{LDS}\\
+		Für diesen Versuch errechenen wir das LDS das eben berechneten Quantisierungsrauschen. 
+
+
+
+        \begin{center}
+            \begin{tabular}{ll}
+            
+            \hspace{-4cm}
+                
+                \begin{minipage}{0.55\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.4, trim = 1.5cm 7cm 1.5cm 8cm, clip]
+                        {./Bilder/sin8_Quantisierungsfehler_LDS}
+                          \caption{LDS - Sinussignal 8kHz}
+                    \end{figure}
+                \end{minipage}
+                              
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.4, trim = 1.5cm 7cm 1.5cm 8cm, clip]
+                        {./Bilder/sin100_Quantisierungsfehler_LDS}
+                          \caption{LDS - Sinussignal 100kHz}
+                    \end{figure}
+                \end{minipage}
+            
+            \end{tabular}
+        \end{center}
         
+                \begin{center}
+            \begin{tabular}{ll}
+            
+            \hspace{-4cm}
+                
+                \begin{minipage}{0.55\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.4, trim = 1.5cm 7cm 1.5cm 8cm, clip]
+                        {./Bilder/drei8_Quantisierungsfehler_LDS}
+                          \caption{LDS - Dreiecksignal 8kHz}
+                    \end{figure}
+                \end{minipage}
+                              
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.4, trim = 1.5cm 7cm 1.5cm 8cm, clip]
+                        {./Bilder/drei100_Quantisierungsfehler_LDS}
+                          \caption{LDS - Dreiecksignal 100kHz}
+                    \end{figure}
+                \end{minipage}
+            
+            \end{tabular}
+        \end{center}
+			
+		\end{quote} % Ende Subsubsection
     \end{quote}  % Ende Subsection Quantisierungsfehler
          	
 \end{quote}%beende Auswertung
@@ -572,7 +629,8 @@
  Nachrichtenübertragung, S.273
 \bibitem {PCM_Decodierung} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
  Nachrichtenübertragung, S.276
- 
+ \bibitem {LDS} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
+ Nachrichtenübertragung, S.123-124
 
 
 

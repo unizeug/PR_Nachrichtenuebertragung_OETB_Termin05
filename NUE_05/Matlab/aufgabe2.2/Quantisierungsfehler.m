@@ -4,9 +4,9 @@ clear; close all;clc;
 %Kanal B=Eingangssignal, Kanal A=decodiertes Signal
 
 Signal = 0; % für ein Sinussignal
-%Signal = 1; % für ein Dreiecksignal
+Signal = 1; % für ein Dreiecksignal
 
-%Frequenz = 8000;
+Frequenz = 8000;
 Frequenz = 100000;
 
 Bild_abspeichern = 0; % kein Bild wird gespeichert
