@@ -4,10 +4,10 @@ clear; close all;clc;
 %Kanal B=Eingangssignal, Kanal A=decodiertes Signal
 
 Signal = 0; % für ein Sinussignal
-Signal = 1; % für ein Dreiecksignal
+%Signal = 1; % für ein Dreiecksignal
 
 Frequenz = 8000;
-Frequenz = 100000;
+%Frequenz = 100000;
 
 Bild_abspeichern = 0; % kein Bild wird gespeichert
 %Bild_abspeichern = 1; % Das LDS wird gespeichert
@@ -128,13 +128,13 @@ SUPTITLE(['\bf Histogramm des Quantisierungsfehlers', 10]);
 %% errechnen des Leistungsdichtespektrums
 [qfauto,lag]=xcorr(qf,qf);
 
-f_T=100000; % oder =8000
+
+
+f_T=Frequenz
 
 if Signal == 0
     T_ges=sinus.Tinterval*sinus.Length;
-    disp('sinus')
 else
-    disp('Dreieck')
     T_ges=dreieck.Tinterval*dreieck.Length;
 end
 
