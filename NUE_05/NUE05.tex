@@ -141,12 +141,11 @@
 	
 	An dieser Stelle ist zu erwähnen, dass die Quantisierungfehler bei einer
 	PCM-Übertragung relativ klein gehalten werden können und dass der höhere
-	Bandbreitebedarf bei modernen digitalen verfahren mit effizienten
+	Bandbreitebedarf bei modernen digitalen Verfahren mit effizienten
 	Quellencodierungen und mehrstufigen Übertragungen der Binärinformation nicht
 	mehr auftritt.\\
 	
-	\TODO{Frage: wo wurde das schon mal erwähnt?} \\
-	Wie bereits erwähnt, wird bei der PCM-Übertragung das analoge Signal mit einer
+	Bei der PCM-Übertragung wird das analoge Signal mit einer
 	oberen Grenzfrequenz von $B_{Quelle}$ mit einer Abtastfrequenz von $f_T \geq 2
 	\cdot B_{Quelle}$ abgetastet, wodurch ein PAM Signal mit den Abtastwerten im
 	Abstand $T = \frac{1}{f_T}$ entsteht.\\
@@ -175,10 +174,10 @@
     
 	Übertragen werden diese wertdiskreten Signale durch den digitalen Kanal, der
 	sie bei fehlerfreier Übertragung eins zu eins an den Empfänger weitergibt. \\
-	\TODO{was willst du mit dem nächsten satz
-	sagen?} \\
-	Dabei umfasst der Kanal von der Umwandlung in binäre Signalelemente über die
-	Impulsformung und Modulation bishin zum Entscheider auf der Empfangsseite.\\
+	
+	Dabei setzt sich der Kanal aus den Übertragungsschritten Umwandlung in
+	binäre Signalelemente, Impulsformung und Modulation bishin zum Entscheider 
+	auf der Empfangsseite zusammen.\\
 	Für die Kanalbandbreite bei einer binären Übertragung eines PCM-modulierten
 	Signals und einer Bitrate von $R_{Bit} = f_T \cdot m \ \ \frac{bit}{s}$ gilt:
 	 
@@ -488,8 +487,10 @@
             \end{center}
             \vspace{1em}
             
-            \TODO{Plots erklären, was zum Quantisierungsfehler sagen}
-    
+            \TODO{Plots erklären, was zum Quantisierungsfehler sagen}\\
+            
+            
+            
             \vspace{1em}
             
             Als nächstes betrachten wir das selbe Sinussignal bei einer Abtastfrequenz von $100 kHz$. 
