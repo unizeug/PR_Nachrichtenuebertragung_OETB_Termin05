@@ -423,246 +423,255 @@
     
     \subsection{Aufgabe 2.2 - Quantisierungsfehler}
     \begin{quote}
-
-        \TODO{Satz beginn Sinus 8kHz} \\
-        
-        \begin{center}
-            \begin{tabular}{ll}
+    
+        \subsection{Quantisierungsfehler und Histogramm}
+        \begin{quote}
+    
+            \TODO{Satz beginn Sinus 8kHz} \\
             
-            \hspace{-4cm}
-                \begin{minipage}{0.6\textwidth}
-                    \begin{figure}[H]
-                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
-                        7.5cm, clip]
-                        {./Bilder/sin8_Eingang_vs_DecodiertAmpl-angepasst}
-                          \caption{Eingangssignal und decodiert, \newline
-                          amplitudenangepasstes Signal}
-                    \end{figure}
-                \end{minipage}
+            \begin{center}
+                \begin{tabular}{ll}
                 
-                \begin{minipage}{0.6\textwidth}
-                    \begin{figure}[H]
-                        \includegraphics[scale=0.4,trim = 0cm 7cm 0cm
-                        7.5cm, clip]
-                        {./Bilder/sin8_Eingang_vs_korrektDecodiert}
-                          \caption{Eingangssignal und korrekt decodiertes
-                          Ausgangssignal}
-                    \end{figure}
-                \end{minipage}
-            
-            \end{tabular}
-        \end{center}
-        
-        
-        
-        \begin{center}
-            \begin{tabular}{ll}
-            
-            \hspace{-4cm}
+                \hspace{-4cm}
+                    \begin{minipage}{0.6\textwidth}
+                        \begin{figure}[H]
+                            \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                            7.5cm, clip]
+                            {./Bilder/sin8_Eingang_vs_DecodiertAmpl-angepasst}
+                              \caption{Eingangssignal und decodiert, \newline
+                              amplitudenangepasstes Signal}
+                        \end{figure}
+                    \end{minipage}
+                    
+                    \begin{minipage}{0.6\textwidth}
+                        \begin{figure}[H]
+                            \includegraphics[scale=0.4,trim = 0cm 7cm 0cm
+                            7.5cm, clip]
+                            {./Bilder/sin8_Eingang_vs_korrektDecodiert}
+                              \caption{Eingangssignal und \newline
+                              korrekt decodiertes Ausgangssignal}
+                        \end{figure}
+                    \end{minipage}
                 
-                \begin{minipage}{0.55\textwidth}
-                    \begin{figure}[H]
-                        \includegraphics[scale=0.4, trim = 0cm 7cm 0cm
-                        7.5cm, clip]
-                        {./Bilder/sin8_Quantisierungsfehler}
-                          \caption{Quntisierungsfehler (Sinus, 100kHz clk)}
-                    \end{figure}
-                \end{minipage}
-                              
-                \begin{minipage}{0.6\textwidth}
-                    \begin{figure}[H]
-                        \includegraphics[scale=0.4, trim = 0cm 7cm 0cm
-                        7.5cm, clip]
-                        {./Bilder/sin8_Histogramm}
-                          \caption{Histogramm des Quantisierungsfehlers}
-                    \end{figure}
-                \end{minipage}
+                \end{tabular}
+            \end{center}
             
-            \end{tabular}
-        \end{center}
-        
-        \TODO{Plots erklären, was zum Quantisierungsfehler sagen}
-
-
-        Die Ergebnisse der Messung aus Aufgabe 2 ergaben für das Sinussignal mit
-        einer Clockfrequenz von $100 kHz$ folgende Plots. Zuerst werden die
-        mittelwertfreien Sende- und Empfangssignale bezüglich Amplitude und
-        Zeitverschiebung aufeinander angepasst. Danach wird der
-        Quantisierungsfehler und dessen Histogramm gebildet:
-
-        \begin{center}
-            \begin{tabular}{ll}
             
-            \hspace{-4cm}
-                \begin{minipage}{0.6\textwidth}
-                    \begin{figure}[H]
-                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
-                        7.5cm, clip]
-                        {./Bilder/sin100_Eingang_vs_DecodiertAmpl-angepasst}
-                          \caption{Eingangssignal und decodiert, \newline
-                          amplitudenangepasstes Signal}
-                    \end{figure}
-                \end{minipage}
+            
+            \begin{center}
+                \begin{tabular}{ll}
                 
-                \begin{minipage}{0.6\textwidth}
-                    \begin{figure}[H]
-                        \includegraphics[scale=0.4,trim = 0cm 7cm 0cm
-                        7.5cm, clip]
-                        {./Bilder/sin100_Eingang_vs_korrektDecodiert}
-                          \caption{Eingangssignal und korrekt decodiertes
-                          Ausgangssignal}
-                    \end{figure}
-                \end{minipage}
-            
-            \end{tabular}
-        \end{center}
-        
-        
-        
-        \begin{center}
-            \begin{tabular}{ll}
-            
-            \hspace{-4cm}
+                \hspace{-4cm}
+                    
+                    \begin{minipage}{0.55\textwidth}
+                        \begin{figure}[H]
+                            \includegraphics[scale=0.4, trim = 0cm 7cm 0cm
+                            7.5cm, clip]
+                            {./Bilder/sin8_Quantisierungsfehler}
+                              \caption{Quntisierungsfehler (Sinus, 100kHz clk)}
+                        \end{figure}
+                    \end{minipage}
+                                  
+                    \begin{minipage}{0.6\textwidth}
+                        \begin{figure}[H]
+                            \includegraphics[scale=0.4, trim = 0cm 7cm 0cm
+                            7.5cm, clip]
+                            {./Bilder/sin8_Histogramm}
+                              \caption{Histogramm des Quantisierungsfehlers}
+                        \end{figure}
+                    \end{minipage}
                 
-                \begin{minipage}{0.55\textwidth}
-                    \begin{figure}[H]
-                        \includegraphics[scale=0.4, trim = 0cm 7cm 0cm
-                        7.5cm, clip]
-                        {./Bilder/sin100_Quantisierungsfehler}
-                          \caption{Quntisierungsfehler (Sinus, 100kHz clk)}
-                    \end{figure}
-                \end{minipage}
-                              
-                \begin{minipage}{0.6\textwidth}
-                    \begin{figure}[H]
-                        \includegraphics[scale=0.4, trim = 0cm 7cm 0cm
-                        7.5cm, clip]
-                        {./Bilder/sin100_Histogramm}
-                          \caption{Histogramm des Quantisierungsfehlers}
-                    \end{figure}
-                \end{minipage}
+                \end{tabular}
+            \end{center}
+            \vspace{1em}
             
-            \end{tabular}
-        \end{center}
-        
-        \TODO{Plots erklären, was zum Quantisierungsfehler sagen}
-        
-        \begin{center}
-            \begin{tabular}{ll}
-            
-            \hspace{-4cm}
-                \begin{minipage}{0.6\textwidth}
-                    \begin{figure}[H]
-                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
-                        8.5cm, clip]
-                        {./Bilder/drei8_Eingang_vs_DecodiertAmpl-angepasst}
-                          \caption{Eingangssignal und decodiert, \newline
-                          amplitudenangepasstes Signal}
-                    \end{figure}
-                \end{minipage}
+            \TODO{Plots erklären, was zum Quantisierungsfehler sagen}
+    
+    
+            Die Ergebnisse der Messung aus Aufgabe 2 ergaben für das Sinussignal mit
+            einer Clockfrequenz von $100 kHz$ folgende Plots. Zuerst werden die
+            mittelwertfreien Sende- und Empfangssignale bezüglich Amplitude und
+            Zeitverschiebung aufeinander angepasst. Danach wird der
+            Quantisierungsfehler und dessen Histogramm gebildet:
+    
+            \begin{center}
+                \begin{tabular}{ll}
                 
-                \begin{minipage}{0.6\textwidth}
-                    \begin{figure}[H]
-                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
-                        8.5cm, clip]
-                        {./Bilder/drei8_Eingang_vs_korrektDecodiert}
-                          \caption{Eingangssignal und korrekt decodiertes
-                          Ausgangssignal}
-                    \end{figure}
-                \end{minipage}
-            
-            \end{tabular}
-        \end{center}
-        
-        
-        
-        \begin{center}
-            \begin{tabular}{ll}
-            
-            \hspace{-4cm}
+                \hspace{-4cm}
+                    \begin{minipage}{0.6\textwidth}
+                        \begin{figure}[H]
+                            \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                            7.5cm, clip]
+                            {./Bilder/sin100_Eingang_vs_DecodiertAmpl-angepasst}
+                              \caption{Eingangssignal und decodiert, \newline
+                              amplitudenangepasstes Signal}
+                        \end{figure}
+                    \end{minipage}
+                    
+                    \begin{minipage}{0.6\textwidth}
+                        \begin{figure}[H]
+                            \includegraphics[scale=0.4,trim = 0cm 7cm 0cm
+                            7.5cm, clip]
+                            {./Bilder/sin100_Eingang_vs_korrektDecodiert}
+                              \caption{Eingangssignal und korrekt decodiertes
+                              Ausgangssignal}
+                        \end{figure}
+                    \end{minipage}
                 
-                \begin{minipage}{0.55\textwidth}
-                    \begin{figure}[H]
-                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
-                        8.5cm, clip]
-                        {./Bilder/drei8_Quantisierungsfehler}
-                          \caption{Quntisierungsfehler (Dreieck, 100kHz clk)}
-                    \end{figure}
-                \end{minipage}
-                              
-                \begin{minipage}{0.6\textwidth}
-                    \begin{figure}[H]
-                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
-                        8.5cm, clip]
-                        {./Bilder/drei8_Histogramm}
-                          \caption{Histogramm des Quantisierungsfehlers}
-                    \end{figure}
-                \end{minipage}
+                \end{tabular}
+            \end{center}
             
-            \end{tabular}
-        \end{center}
-        
-        \TODO{Plots erklären, was zum Quantisierungsfehler sagen}        
-        
-        
-        Nun betrachten wir die Plots der Messung eines Dreiecksignal, ebenfalls
-        mit einer Taktfrequenz von zunächst $100 kHz$:
-        \begin{center}
-            \begin{tabular}{ll}
             
-            \hspace{-4cm}
-                \begin{minipage}{0.6\textwidth}
-                    \begin{figure}[H]
-                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
-                        8.5cm, clip]
-                        {./Bilder/drei100_Eingang_vs_DecodiertAmpl-angepasst}
-                          \caption{Eingangssignal und decodiert, \newline
-                          amplitudenangepasstes Signal}
-                    \end{figure}
-                \end{minipage}
+            
+            \begin{center}
+                \begin{tabular}{ll}
                 
-                \begin{minipage}{0.6\textwidth}
-                    \begin{figure}[H]
-                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
-                        8.5cm, clip]
-                        {./Bilder/drei100_Eingang_vs_korrektDecodiert}
-                          \caption{Eingangssignal und korrekt decodiertes
-                          Ausgangssignal}
-                    \end{figure}
-                \end{minipage}
-            
-            \end{tabular}
-        \end{center}
-        
-        
-        
-        \begin{center}
-            \begin{tabular}{ll}
-            
-            \hspace{-4cm}
+                \hspace{-4cm}
+                    
+                    \begin{minipage}{0.55\textwidth}
+                        \begin{figure}[H]
+                            \includegraphics[scale=0.4, trim = 0cm 7cm 0cm
+                            7.5cm, clip]
+                            {./Bilder/sin100_Quantisierungsfehler}
+                              \caption{Quntisierungsfehler (Sinus, 100kHz clk)}
+                        \end{figure}
+                    \end{minipage}
+                                  
+                    \begin{minipage}{0.6\textwidth}
+                        \begin{figure}[H]
+                            \includegraphics[scale=0.4, trim = 0cm 7cm 0cm
+                            7.5cm, clip]
+                            {./Bilder/sin100_Histogramm}
+                              \caption{Histogramm des Quantisierungsfehlers}
+                        \end{figure}
+                    \end{minipage}
                 
-                \begin{minipage}{0.55\textwidth}
-                    \begin{figure}[H]
-                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
-                        8.5cm, clip]
-                        {./Bilder/drei100_Quantisierungsfehler}
-                          \caption{Quntisierungsfehler (Dreieck, 100kHz clk)}
-                    \end{figure}
-                \end{minipage}
-                              
-                \begin{minipage}{0.6\textwidth}
-                    \begin{figure}[H]
-                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
-                        8.5cm, clip]
-                        {./Bilder/drei100_Histogramm}
-                          \caption{Histogramm des Quantisierungsfehlers}
-                    \end{figure}
-                \end{minipage}
+                \end{tabular}
+            \end{center}
+            \vspace{1em}
             
-            \end{tabular}
-        \end{center}
+            \TODO{Plots erklären, was zum Quantisierungsfehler sagen}
+            
+            \begin{center}
+                \begin{tabular}{ll}
+                
+                \hspace{-4cm}
+                    \begin{minipage}{0.6\textwidth}
+                        \begin{figure}[H]
+                            \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                            8.5cm, clip]
+                            {./Bilder/drei8_Eingang_vs_DecodiertAmpl-angepasst}
+                              \caption{Eingangssignal und decodiert, \newline
+                              amplitudenangepasstes Signal}
+                        \end{figure}
+                    \end{minipage}
+                    
+                    \begin{minipage}{0.6\textwidth}
+                        \begin{figure}[H]
+                            \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                            8.5cm, clip]
+                            {./Bilder/drei8_Eingang_vs_korrektDecodiert}
+                              \caption{Eingangssignal und korrekt decodiertes
+                              Ausgangssignal}
+                        \end{figure}
+                    \end{minipage}
+                
+                \end{tabular}
+            \end{center}
+            
+            
+            
+            \begin{center}
+                \begin{tabular}{ll}
+                
+                \hspace{-4cm}
+                    
+                    \begin{minipage}{0.55\textwidth}
+                        \begin{figure}[H]
+                            \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                            8.5cm, clip]
+                            {./Bilder/drei8_Quantisierungsfehler}
+                              \caption{Quntisierungsfehler (Dreieck, 100kHz clk)}
+                        \end{figure}
+                    \end{minipage}
+                                  
+                    \begin{minipage}{0.6\textwidth}
+                        \begin{figure}[H]
+                            \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                            8.5cm, clip]
+                            {./Bilder/drei8_Histogramm}
+                              \caption{Histogramm des Quantisierungsfehlers}
+                        \end{figure}
+                    \end{minipage}
+                
+                \end{tabular}
+            \end{center}
+            \vspace{1em}
+            
+            \TODO{Plots erklären, was zum Quantisierungsfehler sagen}        
+            
+            
+            Nun betrachten wir die Plots der Messung eines Dreiecksignal, ebenfalls
+            mit einer Taktfrequenz von zunächst $100 kHz$:
+            \begin{center}
+                \begin{tabular}{ll}
+                
+                \hspace{-4cm}
+                    \begin{minipage}{0.6\textwidth}
+                        \begin{figure}[H]
+                            \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                            8.5cm, clip]
+                            {./Bilder/drei100_Eingang_vs_DecodiertAmpl-angepasst}
+                              \caption{Eingangssignal und decodiert, \newline
+                              amplitudenangepasstes Signal}
+                        \end{figure}
+                    \end{minipage}
+                    
+                    \begin{minipage}{0.6\textwidth}
+                        \begin{figure}[H]
+                            \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                            8.5cm, clip]
+                            {./Bilder/drei100_Eingang_vs_korrektDecodiert}
+                              \caption{Eingangssignal und korrekt decodiertes
+                              Ausgangssignal}
+                        \end{figure}
+                    \end{minipage}
+                
+                \end{tabular}
+            \end{center}
+            
+            
+            
+            \begin{center}
+                \begin{tabular}{ll}
+                
+                \hspace{-4cm}
+                    
+                    \begin{minipage}{0.55\textwidth}
+                        \begin{figure}[H]
+                            \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                            8.5cm, clip]
+                            {./Bilder/drei100_Quantisierungsfehler}
+                              \caption{Quntisierungsfehler (Dreieck, 100kHz clk)}
+                        \end{figure}
+                    \end{minipage}
+                                  
+                    \begin{minipage}{0.6\textwidth}
+                        \begin{figure}[H]
+                            \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
+                            8.5cm, clip]
+                            {./Bilder/drei100_Histogramm}
+                              \caption{Histogramm des Quantisierungsfehlers}
+                        \end{figure}
+                    \end{minipage}
+                
+                \end{tabular}
+            \end{center}
+            \vspace{1em}
+            
+            \TODO{Plots erklären, was zum Quantisierungsfehler sagen}
         
-        \TODO{Plots erklären, was zum Quantisierungsfehler sagen}
+        \end{quote}  % Ende Subsection Quantisierungsfehler und Histogram
         
         \subsubsection{Leistungsdichtespektrum des Quantisierungsfehlers}
 		\begin{quote}
@@ -718,6 +727,7 @@
             
             \end{tabular}
         \end{center}
+        \vspace{1em}
 			
 		Bei beiden Signalentypen, Sinus und Dreiecksignal, fällt auf, dass das Leistungsdichtespektrum des
 		Quantisierungsfehlers bei den Messungen mit einer Abtastrate von $8 kHz$ deutlich höher ist als bei der Abtastrate
