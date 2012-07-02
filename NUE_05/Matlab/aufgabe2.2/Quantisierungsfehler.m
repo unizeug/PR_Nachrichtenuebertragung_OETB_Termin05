@@ -4,7 +4,7 @@ clear; close all;clc;
 %Kanal B=Eingangssignal, Kanal A=decodiertes Signal
 
 Signal = 0; % für ein Sinussignal
-Signal = 1; % für ein Dreiecksignal
+%Signal = 1; % für ein Dreiecksignal
 
 
 Frequenz = 8000;
@@ -12,7 +12,7 @@ Frequenz = 8000;
 
 
 Bild_abspeichern = 0; % kein Bild wird gespeichert
-%Bild_abspeichern = 1; % Das LDS wird gespeichert
+Bild_abspeichern = 1; % Das LDS wird gespeichert
 
 if Signal == 0
     
@@ -132,7 +132,7 @@ SUPTITLE(['\bf Quantisierungsfehler',10]);
 figure(4);
 hist(qf);     % macht automatisch 10 gleichgroï¿½e bins
 xlabel('Spannung [V]');
-ylabel('Hï¿½ufigkeit');
+ylabel('Häufigkeit');
 SUPTITLE(['\bf Histogramm des Quantisierungsfehlers', 10]);
 
 %% errechnen des Leistungsdichtespektrums
@@ -147,18 +147,53 @@ FFTshiftplotZP_autocorr(qfauto, T_ges, f_T,4,'b', 525,-750,750)
 %% Bilder des LDS Abspeichern
 if Bild_abspeichern == 1
     disp('Bild wurde abgespeichert')
-    figure(525);
     if Signal == 0 % Sinussignal
         if Frequenz == 8000
+            figure(1);
+            print -painters -dpdf -r600 ../../Bilder/sin8_Eingang_vs_DecodiertAmpl-angepasst.pdf
+            figure(2);
+            print -painters -dpdf -r600 ../../Bilder/sin8_Eingang_vs_korrektDecodiert.pdf
+            figure(3);
+            print -painters -dpdf -r600 ../../Bilder/sin8_Quantisierungsfehler.pdf
+            figure(4);
+            print -painters -dpdf -r600 ../../Bilder/sin8_Histogramm.pdf
+            figure(525);
             print -painters -dpdf -r600 ../../Bilder/sin8_Quantisierungsfehler_LDS.pdf
         else
+            figure(1);
+            print -painters -dpdf -r600 ../../Bilder/sin100_Eingang_vs_DecodiertAmpl-angepasst.pdf
+            figure(2);
+            print -painters -dpdf -r600 ../../Bilder/sin100_Eingang_vs_korrektDecodiert.pdf
+            figure(3);
+            print -painters -dpdf -r600 ../../Bilder/sin100_Quantisierungsfehler.pdf
+            figure(4);
+            print -painters -dpdf -r600 ../../Bilder/sin100_Histogramm.pdf
+            figure(525);
             print -painters -dpdf -r600 ../../Bilder/sin100_Quantisierungsfehler_LDS.pdf
         end
     else % Dreieckssignal
         if Frequenz == 8000
-            print -painters -dpdf -r600 ../../Bilder/drei8_Quantisierungsfehler_LDS.pdf
+            figure(1);
+            print -painters -dpdf -r600 ../../Bilder/drei8_Eingang_vs_DecodiertAmpl-angepasst.pdf
+            figure(2);
+            print -painters -dpdf -r600 ../../Bilder/drei8_Eingang_vs_korrektDecodiert.pdf
+            figure(3);
+            print -painters -dpdf -r600 ../../Bilder/drei8_Quantisierungsfehler.pdf
+            figure(4);
+            print -painters -dpdf -r600 ../../Bilder/drei8_Histogramm.pdf
+            figure(525);
+            print -painters -dpdf -r600 ../../Bilder/drei8_Quantisierungsfehler_LDS.pdf        
         else
-            print -painters -dpdf -r600 ../../Bilder/drei100_Quantisierungsfehler_LDS.pdf
+            figure(1);
+            print -painters -dpdf -r600 ../../Bilder/drei100_Eingang_vs_DecodiertAmpl-angepasst.pdf
+            figure(2);
+            print -painters -dpdf -r600 ../../Bilder/drei100_Eingang_vs_korrektDecodiert.pdf
+            figure(3);
+            print -painters -dpdf -r600 ../../Bilder/drei100_Quantisierungsfehler.pdf
+            figure(4);
+            print -painters -dpdf -r600 ../../Bilder/drei100_Histogramm.pdf
+            figure(525);
+            print -painters -dpdf -r600 ../../Bilder/drei100_Quantisierungsfehler_LDS.pdf        
         end
     end
 end
