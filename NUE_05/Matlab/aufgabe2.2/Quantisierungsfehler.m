@@ -3,25 +3,24 @@ clear; close all;clc;
 %% Messungen laden und Zeitvektor erstellen
 %Kanal B=Eingangssignal, Kanal A=decodiertes Signal
 
-Signal = 0; % für ein Sinussignal
-<<<<<<< HEAD
-%Signal = 1; % für ein Dreiecksignal
-=======
-% Signal = 1; % für ein Dreiecksignal
->>>>>>> branch 'master' of https://github.com/unizeug/PR_Nachrichtenuebertragung_OETB_Termin05.git
+Signal = 0; % fï¿½r ein Sinussignal
+%Signal = 1; % fï¿½r ein Dreiecksignal
 
-<<<<<<< HEAD
+% Signal = 1; % fï¿½r ein Dreiecksignal
+
+
 Frequenz = 8000;
 %Frequenz = 100000;
-=======
+
 % Frequenz = 8000;
 Frequenz = 100000;
->>>>>>> branch 'master' of https://github.com/unizeug/PR_Nachrichtenuebertragung_OETB_Termin05.git
+
 
 Bild_abspeichern = 0; % kein Bild wird gespeichert
 %Bild_abspeichern = 1; % Das LDS wird gespeichert
 
 if Signal == 0
+    
     if Frequenz == 8000
         sinus = load('sinus_clk8kHz');
         sinus.B = -1*sinus.B;
@@ -30,18 +29,25 @@ if Signal == 0
         sinus = load('sinus_clk100kHz');
         disp('100k')
     end
+    
     tend=sinus.Length*sinus.Tinterval;
     t=linspace(0,tend,sinus.Length);
+    
+    T_ges=sinus.Tinterval*sinus.Length;
 
 else % Signal == 'Dreieck'
+    
     if Frequenz == 8000
         dreieck = load('dreieck_clk8kHz');
         dreieck.B = -1*dreieck.B;
     else % Frequenz == 100000
         dreieck = load('dreieck_clk100kHz');
     end
+    
     tend=dreieck.Length*dreieck.Tinterval;
     t=linspace(0,tend,dreieck.Length);
+    
+    T_ges=dreieck.Tinterval*dreieck.Length;
 end
 
 %% Mittelwertbefreiung
@@ -129,9 +135,9 @@ SUPTITLE(['\bf Quantisierungsfehler',10]);
 
 % %Plot Quantisierungsfehler-Histogramm
 figure(4);
-hist(qf);     % macht automatisch 10 gleichgroße bins
+hist(qf);     % macht automatisch 10 gleichgroï¿½e bins
 xlabel('Spannung [V]');
-ylabel('Häufigkeit');
+ylabel('Hï¿½ufigkeit');
 SUPTITLE(['\bf Histogramm des Quantisierungsfehlers', 10]);
 
 %% errechnen des Leistungsdichtespektrums
@@ -140,14 +146,6 @@ SUPTITLE(['\bf Histogramm des Quantisierungsfehlers', 10]);
 
 
 f_T=Frequenz
-
-if Signal == 0
-    T_ges=sinus.Tinterval*sinus.Length;
-else
-    T_ges=dreieck.Tinterval*dreieck.Length;
-end
-
-
 
 
 
