@@ -4,7 +4,7 @@ clear; close all;clc;
 %Kanal B=Eingangssignal, Kanal A=decodiertes Signal
 
 Signal = 0; % für ein Sinussignal
-%Signal = 1; % für ein Dreiecksignal
+Signal = 1; % für ein Dreiecksignal
 
 Frequenz = 8000;
 %Frequenz = 100000;
@@ -13,6 +13,7 @@ Bild_abspeichern = 0; % kein Bild wird gespeichert
 %Bild_abspeichern = 1; % Das LDS wird gespeichert
 
 if Signal == 0
+    
     if Frequenz == 8000
         sinus = load('sinus_clk8kHz');
         sinus.B = -1*sinus.B;
@@ -21,18 +22,25 @@ if Signal == 0
         sinus = load('sinus_clk100kHz');
         disp('100k')
     end
+    
     tend=sinus.Length*sinus.Tinterval;
     t=linspace(0,tend,sinus.Length);
+    
+    T_ges=sinus.Tinterval*sinus.Length;
 
 else % Signal == 'Dreieck'
+    
     if Frequenz == 8000
         dreieck = load('dreieck_clk8kHz');
         dreieck.B = -1*dreieck.B;
     else % Frequenz == 100000
         dreieck = load('dreieck_clk100kHz');
     end
+    
     tend=dreieck.Length*dreieck.Tinterval;
     t=linspace(0,tend,dreieck.Length);
+    
+    T_ges=dreieck.Tinterval*dreieck.Length;
 end
 
 %% Mittelwertbefreiung
@@ -131,15 +139,6 @@ SUPTITLE(['\bf Histogramm des Quantisierungsfehlers', 10]);
 
 
 f_T=Frequenz
-
-if Signal == 0
-    T_ges=sinus.Tinterval*sinus.Length;
-else
-    T_ges=dreieck.Tinterval*dreieck.Length;
-end
-
-
-
 
 
 %% plotten der Autokorrelation und des Leistungsdichtespektrum des

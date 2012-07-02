@@ -150,7 +150,6 @@
 	oberen Grenzfrequenz von $B_{Quelle}$ mit einer Abtastfrequenz von $f_T \geq 2
 	\cdot B_{Quelle}$ abgetastet, wodurch ein PAM Signal mit den Abtastwerten im
 	Abstand $T = \frac{1}{f_T}$ entsteht.\\
-	\TODO{nur durch abtastung entsteht doch kein PAM signal. der Abtastimpuls müsste doch eine nullflanke haben} \\
 	Anhand eines Quantisierers wird diesen Werten jeweils eins von $M = 2^m$ möglichen wertdiskreten Signalen zugeordnet,
 	deren Indizes in digitale Codewörter umgewandelt werden. Diese Codewörter sind
 	typischerweise in binärer Form und bestehen aus $m = ld(M)$ Bit pro Abtastwert.
@@ -174,7 +173,6 @@
             \cite{Digitalisierung_des_Signals}
     \end{figure}
     
-	\TODO{Klären: meiner Meinung nach gibt es gar keine digitalen Kanäle} \\
 	Übertragen werden diese wertdiskreten Signale durch den digitalen Kanal, der
 	sie bei fehlerfreier Übertragung eins zu eins an den Empfänger weitergibt. \\
 	\TODO{was willst du mit dem nächsten satz
@@ -601,7 +599,10 @@
             \end{tabular}
         \end{center}
 			
-		Bei beiden Signalen fällt auf, dass 
+		Bei beiden Signalentypen, Sinus und Dreiecksignal, fällt auf, dass das Leistungsdichtespektrum des
+		Quantisierungsfehlers bei den Messungen mit einer Abtastrate von $8 kHz$ deutlich höher ist als bei der Abtastrate
+		$100 kHz$. Das lässt auf einen wesentlich höheres Quantisierungrauschen bei der niedrigereren Abtastrate schließen und
+		passt daher zu unserern Beobachtungen auf der vorhergehenden Aufgabe.
 			
 		\end{quote} % Ende Subsubsection LDS
     \end{quote}  % Ende Subsection Quantisierungsfehler
