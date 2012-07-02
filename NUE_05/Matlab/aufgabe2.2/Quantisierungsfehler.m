@@ -3,17 +3,12 @@ clear; close all;clc;
 %% Messungen laden und Zeitvektor erstellen
 %Kanal B=Eingangssignal, Kanal A=decodiertes Signal
 
-Signal = 0; % fï¿½r ein Sinussignal
-%Signal = 1; % fï¿½r ein Dreiecksignal
-
-% Signal = 1; % fï¿½r ein Dreiecksignal
+Signal = 0; % für ein Sinussignal
+Signal = 1; % für ein Dreiecksignal
 
 
 Frequenz = 8000;
-%Frequenz = 100000;
-
-% Frequenz = 8000;
-Frequenz = 100000;
+% Frequenz = 100000;
 
 
 Bild_abspeichern = 0; % kein Bild wird gespeichert
@@ -143,11 +138,7 @@ SUPTITLE(['\bf Histogramm des Quantisierungsfehlers', 10]);
 %% errechnen des Leistungsdichtespektrums
 [qfauto,lag]=xcorr(qf,qf);
 
-
-
-f_T=Frequenz
-
-
+f_T=Frequenz;
 
 %% plotten der Autokorrelation und des Leistungsdichtespektrum des
 %% Quantisierungsfehlers
