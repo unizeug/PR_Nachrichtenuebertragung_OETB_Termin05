@@ -19,10 +19,8 @@ if Signal == 0
     if Frequenz == 8000
         sinus = load('sinus_clk8kHz');
         sinus.B = -1*sinus.B;
-        disp('f=8K')
     else
         sinus = load('sinus_clk100kHz');
-        disp('100k')
     end
     
     tend=sinus.Length*sinus.Tinterval;
@@ -118,6 +116,7 @@ u = b;          %u = Eingangsignal, je auf Kanal B
 
 %qf = y(delay_eva+1:end)-u(1:end-delay_eva);
 qf = y(delay+1:end)-u(1:end-delay);
+length(qf)
 
 
 %% plotten des Quantisierungsfehlers und des Histogramms
@@ -143,7 +142,7 @@ f_T=Frequenz;
 %% plotten der Autokorrelation und des Leistungsdichtespektrum des
 %% Quantisierungsfehlers
 
-FFTshiftplotZP_autocorr(abs(qf), T_ges, f_T,4,'b', 526,0,4000)
+FFTshiftplotZP_autocorr(abs(qf), T_ges, f_T,4,'b', 525,0,f_T/2)
 
 
 %% Bilder des LDS Abspeichern
