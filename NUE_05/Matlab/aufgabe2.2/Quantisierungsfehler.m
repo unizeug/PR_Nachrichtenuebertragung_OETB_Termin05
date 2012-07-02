@@ -4,10 +4,19 @@ clear; close all;clc;
 %Kanal B=Eingangssignal, Kanal A=decodiertes Signal
 
 Signal = 0; % für ein Sinussignal
+<<<<<<< HEAD
 %Signal = 1; % für ein Dreiecksignal
+=======
+% Signal = 1; % für ein Dreiecksignal
+>>>>>>> branch 'master' of https://github.com/unizeug/PR_Nachrichtenuebertragung_OETB_Termin05.git
 
+<<<<<<< HEAD
 Frequenz = 8000;
 %Frequenz = 100000;
+=======
+% Frequenz = 8000;
+Frequenz = 100000;
+>>>>>>> branch 'master' of https://github.com/unizeug/PR_Nachrichtenuebertragung_OETB_Termin05.git
 
 Bild_abspeichern = 0; % kein Bild wird gespeichert
 %Bild_abspeichern = 1; % Das LDS wird gespeichert
