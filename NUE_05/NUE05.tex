@@ -12,11 +12,11 @@
 
 
 \newcommand{\pdftitle}{Nachrichten\"ubertragung\ Praktikum\ 05}
-\newcommand{\prototitle}{Praktikum 05 \\ Pulscodemodulation ud Quantisierung}
+\newcommand{\prototitle}{Praktikum 05 \\ Pulscodemodulation und Quantisierung}
 
 
 \input{../../packages/tu_header_8}
-% \begin{document}
+ \begin{document}
 
 % \lstlistoflistings
 \definecolor{darkgray}{rgb}{0.95,0.95,0.95}
@@ -68,7 +68,7 @@
 \begin{quote}
 	
 	In diesem Termin wird eine Pulscodemodulation (PCM) Übertragungstrecke
-	aufgebaut und untersucht. Außerdem wird der Ausmaß von Quantisierungsfehlern
+	aufgebaut und untersucht. Außerdem wird das Ausmaß von Quantisierungsfehlern
 	bei der digitalen Übertragung, sowie das Leistungsdichtespektrum (LDS) dieser
 	Fehler gemessen.
 
@@ -149,8 +149,9 @@
 	Wie bereits erwähnt, wird bei der PCM-Übertragung das analoge Signal mit einer
 	oberen Grenzfrequenz von $B_{Quelle}$ mit einer Abtastfrequenz von $f_T \geq 2
 	\cdot B_{Quelle}$ abgetastet, wodurch ein PAM Signal mit den Abtastwerten im
-	Abstand $T = \frac{1}{f_T}$ entsteht. Anhand eines Quantisierers wird diesen
-	Werten jeweils eins von $M = 2^m$ möglichen wertdiskreten Signalen zugeordnet,
+	Abstand $T = \frac{1}{f_T}$ entsteht.\\
+	\TODO{nur durch abtastung entsteht doch kein PAM signal. der Abtastimpuls müsste doch eine nullflanke haben} \\
+	Anhand eines Quantisierers wird diesen Werten jeweils eins von $M = 2^m$ möglichen wertdiskreten Signalen zugeordnet,
 	deren Indizes in digitale Codewörter umgewandelt werden. Diese Codewörter sind
 	typischerweise in binärer Form und bestehen aus $m = ld(M)$ Bit pro Abtastwert.
 	Dabei einsteht eine Bitrate von
@@ -173,10 +174,12 @@
             \cite{Digitalisierung_des_Signals}
     \end{figure}
     
-	
+	\TODO{Klären: meiner Meinung nach gibt es gar keine digitalen Kanäle} \\
 	Übertragen werden diese wertdiskreten Signale durch den digitalen Kanal, der
-	sie bei fehlerfreier Übertragung eins zu eins an den Empfänger weitergibt. \TODO{was willst du mit dem nächsten satz
-	sagen?} \\Dabei umfasst der Kanal von der Umwandlung in binäre Signalelemente über die
+	sie bei fehlerfreier Übertragung eins zu eins an den Empfänger weitergibt. \\
+	\TODO{was willst du mit dem nächsten satz
+	sagen?} \\
+	Dabei umfasst der Kanal von der Umwandlung in binäre Signalelemente über die
 	Impulsformung und Modulation bishin zum Entscheider auf der Empfangsseite.\\
 	Für die Kanalbandbreite bei einer binären Übertragung eines PCM-modulierten
 	Signals und einer Bitrate von $R_{Bit} = f_T \cdot m \ \ \frac{bit}{s}$ gilt:
@@ -380,7 +383,7 @@
         Quantisierungsfehler verstärken. Denkbar ist auch, dass einzelne Bits während der Übertragung verfälscht
         wurden.\vspace{1em}
         
-        Wenn man die Grafik bei dem Spannungswert $0V$ vergößert fällt auf, dass die Kennlinie auch für diese Spannung
+        Wenn man die Grafik bei dem Spannungswert $0V$ vergrößert fällt auf, dass die Kennlinie auch für diese Spannung
         einen Wert besitzt. Dadurch lässt sich darauf schließen, dass es sich bei dem eingesetzten Quantisierer um
         einen Midtread Quantisierer gehandelt hat. Im Falle eine Midrise Quantisierers hätte die Kennlinie
         zwei Stufen nahe bei der Spannung $0V$ jedoch keine genau bei diesem Spannungswert.
@@ -410,7 +413,7 @@
         der Kennlinie Erkennen. Wie in der Vorbereitungsaufgabe geht der Quanisierer sowohl für sehr hohe Werte als auch
         für niedrige Werte in die Sättigung. Jedoch ist auch diese nicht symetrisch verteilt. Die untere
         Sättigungsgrenze liegt bei $-2,4 V$ und die obere bei $2,6 V$. Auch in diesem Fall vermuten wir die Ursache in
-        dem Realen Bauteil.\vspace{1em}
+        dem realen Bauteil.\vspace{1em}
         
         Genau wie bei der Vorbereitungsaufgabe lassen sich auch bei dieser Kennlinie mehrere Abtaststufen für eine
         Spannungswert erkennen, die auf das selbe Phänomen zurückzuführen sind wie in der Vorbereitung.\\
@@ -424,7 +427,7 @@
     \begin{quote}
         Die Ergebnisse der Messung aus Aufgabe 2 ergaben für das Sinussignal mit
         einer Clockfrequenz von $100 kHz$ folgende Plots. Zuerst werden die
-        mittelwertfreien Sende- und Empfangssignale bezüglich, Amplitude und
+        mittelwertfreien Sende- und Empfangssignale bezüglich Amplitude und
         Zeitverschiebung aufeinander angepasst. Danach wird der
         Quantisierungsfehler und dessen Histogramm gebildet:
         \begin{center}
@@ -434,7 +437,7 @@
                 \begin{minipage}{0.6\textwidth}
                     \begin{figure}[H]
                         \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
-                        8.5cm, clip]
+                        7.5cm, clip]
                         {./Bilder/sin100_Eingang_vs_DecodiertAmpl-angepasst}
                           \caption{Eingangssignal und decodiert,
                           amplitudenangepasstes Signal}
@@ -443,8 +446,8 @@
                 
                 \begin{minipage}{0.6\textwidth}
                     \begin{figure}[H]
-                        \includegraphics[scale=0.4, trim = 0.8cm 7cm 0.8cm
-                        8.5cm, clip]
+                        \includegraphics[scale=0.4, trim = 0cm 7cm 0cm
+                        7.5cm, clip]
                         {./Bilder/sin100_Eingang_vs_korrektDecodiert}
                           \caption{Eingangssignal und korrekt decodiertes
                           Ausgangssignal}
@@ -543,7 +546,64 @@
         
         \TODO{Plots erklären, was zum Quantisierungsfehler sagen}
         
+        \subsubsection{Leistungsdichtespektrum des Quantisierungsfehlers}
+		\begin{quote}
+		
+		Ein Leistungsdichtespektrum beschreibt die Verteilung der Leistung über der Frequenz und wird als
+		Fouriertransformation der Autokorrelationsfunktion eines stationären stochastischen Prozesses definiert.\cite{LDS}\\
+		Für diesen Versuch errechenen wir das LDS das eben berechneten Quantisierungsrauschen. 
+
+
+
+        \begin{center}
+            \begin{tabular}{ll}
+            
+            \hspace{-4cm}
+                
+                \begin{minipage}{0.55\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.4, trim = 1.5cm 7cm 1.5cm 8cm, clip]
+                        {./Bilder/sin8_Quantisierungsfehler_LDS}
+                          \caption{LDS - Sinussignal 8kHz}
+                    \end{figure}
+                \end{minipage}
+                              
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.4, trim = 1.5cm 7cm 1.5cm 8cm, clip]
+                        {./Bilder/sin100_Quantisierungsfehler_LDS}
+                          \caption{LDS - Sinussignal 100kHz}
+                    \end{figure}
+                \end{minipage}
+            
+            \end{tabular}
+        \end{center}
         
+                \begin{center}
+            \begin{tabular}{ll}
+            
+            \hspace{-4cm}
+                
+                \begin{minipage}{0.55\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.4, trim = 1.5cm 7cm 1.5cm 8cm, clip]
+                        {./Bilder/drei8_Quantisierungsfehler_LDS}
+                          \caption{LDS - Dreiecksignal 8kHz}
+                    \end{figure}
+                \end{minipage}
+                              
+                \begin{minipage}{0.6\textwidth}
+                    \begin{figure}[H]
+                        \includegraphics[scale=0.4, trim = 1.5cm 7cm 1.5cm 8cm, clip]
+                        {./Bilder/drei100_Quantisierungsfehler_LDS}
+                          \caption{LDS - Dreiecksignal 100kHz}
+                    \end{figure}
+                \end{minipage}
+            
+            \end{tabular}
+        \end{center}
+			
+		\end{quote} % Ende Subsubsection
     \end{quote}  % Ende Subsection Quantisierungsfehler
          	
 \end{quote}%beende Auswertung
@@ -569,7 +629,8 @@
  Nachrichtenübertragung, S.273
 \bibitem {PCM_Decodierung} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
  Nachrichtenübertragung, S.276
- 
+ \bibitem {LDS} Prof. Dr.-Ing. Sikora, Thomas; Prof. Dr.-Ing. Noll, Peter: Einführung in die
+ Nachrichtenübertragung, S.123-124
 
 
 
