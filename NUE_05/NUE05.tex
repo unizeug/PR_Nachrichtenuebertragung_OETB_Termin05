@@ -425,7 +425,7 @@
         \begin{quote}
     
             Die Ergebnisse der Messung aus Aufgabe 2 ergaben für das Sinussignal mit
-            einer Clockfrequenz von $8 kHz$ folgende Plots. Zuerst werden die
+            einer Abtast von $8 kHz$ folgende Plots. Zuerst werden die
             mittelwertfreien Sende- und Empfangssignale bezüglich Amplitude und
             Zeitverschiebung aufeinander angepasst. Danach wird der
             Quantisierungsfehler und dessen Histogramm gebildet:
@@ -441,6 +441,7 @@
                             {./Bilder/sin8_Eingang_vs_DecodiertAmpl-angepasst}
                               \caption{Eingangssignal und decodiert, \newline
                               amplitudenangepasstes Signal}
+                              \label{sin8_dec_I}
                         \end{figure}
                     \end{minipage}
                     
@@ -451,6 +452,7 @@
                             {./Bilder/sin8_Eingang_vs_korrektDecodiert}
                               \caption{Eingangssignal und
                               korrekt decodiertes Ausgangssignal}
+                              \label{sin8_dec_II}
                         \end{figure}
                     \end{minipage}
                 
@@ -467,7 +469,8 @@
                             \includegraphics[scale=0.4, trim = 0cm 7cm 0cm
                             7.5cm, clip]
                             {./Bilder/sin8_Quantisierungsfehler}
-                              \caption{Quntisierungsfehler (Sinus, 100kHz clk)}
+                              \caption{Quntisierungsfehler (Sinus, 8kHz clk)}
+                              \label{sin8_qf}
                         \end{figure}
                     \end{minipage}
                                   
@@ -477,12 +480,29 @@
                             7.5cm, clip]
                             {./Bilder/sin8_Histogramm}
                               \caption{Histogramm des Quantisierungsfehlers}
+                              \label{sin8_Hist}
                         \end{figure}
                     \end{minipage}
                 
                 \end{tabular}
             \end{center}
             \vspace{1em}
+            
+            Wie man schon in Abbildung \ref{sin8_dec_I} und \ref{sin8_dec_II} erkennen kann hat die niedrige
+            Abtastfrequenz von $8 \ kHz$ zur folge, dass das Eingangssignal nur sehr grob codiert und decodiert wird.
+            Auf Grund dieser niedrigen Abtastfrequenz kann man schon erkennen, dass das codierte Signal das Eingangssignal
+            nicht besonders gut darstellt. Aus dem fließendem Sinussignal wird ein auffallend stufiges Signal.\\
+            Allein schon diese Beobachtung lässt einen hohen Quantisierungsfehler erwarten.\vspace{1em}
+            
+            Die Abbildung \ref{sin8_qf} bestätigt diese Erwartung. Sie zeigt die Abweichung zwischen dem Eingangssignal
+            und dem decodiertem Signal zu den verschiedenen Zeitpunkten. Abgesehen von den zwei Messwerten bei ca.
+            $0.0225 \s$ und $0.03 \ s$, die wir auf Messfehler zurückführen, zeigen die restlichen Messwerte einen
+            Quantisierungsfehler von bis zu $\pm 0.7 \ V$. Wir erinnern nochmal, dass das Eingangsignal gerade einmal
+            eine Spannung von $2 \V_{pp}$ besessen hat. Die Schlussfolgerung dazu ist, dass an einigen Stellen das
+            decodierte Signal eine Abweichung von $35 \%$ gegenüber dem Eingangssignal besitzt.\vspace{1em}
+            
+            Auch das Histogramm in Abbildung \ref{sin8_Hist} zeigt 
+            
             
             \TODO{Plots erklären, was zum Quantisierungsfehler sagen}\\
             
@@ -593,7 +613,7 @@
                             \includegraphics[scale=0.4, trim = 0cm 7cm 0cm
                             7.5cm, clip]
                             {./Bilder/drei8_Quantisierungsfehler}
-                              \caption{Quntisierungsfehler (Dreieck, 100kHz clk)}
+                              \caption{Quntisierungsfehler (Dreieck, 8kHz clk)}
                         \end{figure}
                     \end{minipage}
                                   
@@ -679,6 +699,10 @@
         
         \subsubsection{Leistungsdichtespektrum des Quantisierungsfehlers}
 		\begin{quote}
+		
+		
+		\TODO{Betragsquadrat FFT logy } \\
+		
 		
 		Ein Leistungsdichtespektrum beschreibt die Verteilung der Leistung über der Frequenz und wird als
 		Fouriertransformation der Autokorrelationsfunktion eines stationären stochastischen Prozesses definiert.\cite{LDS}\\

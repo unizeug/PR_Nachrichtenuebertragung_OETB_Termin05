@@ -142,7 +142,8 @@ f_T=Frequenz;
 
 %% plotten der Autokorrelation und des Leistungsdichtespektrum des
 %% Quantisierungsfehlers
-FFTshiftplotZP_autocorr(qfauto, T_ges, f_T,4,'b', 525,-750,750)
+%FFTshiftplotZP_autocorr(qfauto, T_ges, f_T,4,'b', 525,-750,750)
+FFTshiftplotZP_autocorr(qf, T_ges, f_T,4,'b', 525,-750,750)
 
 %% Bilder des LDS Abspeichern
 if Bild_abspeichern == 1
