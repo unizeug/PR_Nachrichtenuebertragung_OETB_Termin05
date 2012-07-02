@@ -4,15 +4,15 @@ clear; close all;clc;
 %Kanal B=Eingangssignal, Kanal A=decodiertes Signal
 
 Signal = 0; % für ein Sinussignal
-%Signal = 1; % für ein Dreiecksignal
+Signal = 1; % für ein Dreiecksignal
 
 
 Frequenz = 8000;
-% Frequenz = 100000;
+ Frequenz = 100000;
 
 
 Bild_abspeichern = 0; % kein Bild wird gespeichert
-Bild_abspeichern = 1; % Das LDS wird gespeichert
+% Bild_abspeichern = 1; % Das LDS wird gespeichert
 
 if Signal == 0
     
@@ -142,8 +142,9 @@ f_T=Frequenz;
 
 %% plotten der Autokorrelation und des Leistungsdichtespektrum des
 %% Quantisierungsfehlers
-%FFTshiftplotZP_autocorr(qfauto, T_ges, f_T,4,'b', 525,-750,750)
-FFTshiftplotZP_autocorr(qf, T_ges, f_T,4,'b', 525,-750,750)
+
+FFTshiftplotZP_autocorr(abs(qf), T_ges, f_T,4,'b', 526,0,4000)
+
 
 %% Bilder des LDS Abspeichern
 if Bild_abspeichern == 1
