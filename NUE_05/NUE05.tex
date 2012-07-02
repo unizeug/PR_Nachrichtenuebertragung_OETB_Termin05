@@ -488,8 +488,8 @@
             \end{center}
             \vspace{1em}
             
-            Obwohl beide Signale, ohne einen Delay, offensichtlich die gleiche
-            Amplitude besitzen, kann man schon in Abbildung \ref{sin8_dec_I}
+            Obwohl beide Signale, zunächst mit und dann ohne einen Delay,
+            offensichtlich die gleiche Amplitude besitzen, kann man schon in Abbildung \ref{sin8_dec_I}
             und \ref{sin8_dec_II} erkennen kann, was die niedrige
             Abtastfrequenz von $8 \ kHz$ zur Folge hat. Das Eingangssignal wird 
             nur sehr grob codiert und decodiert. Auf Grund dieser niedrigen Abtastfrequenz 
@@ -518,16 +518,18 @@
             Vorbereitungs- und ersten Praktikumsaufgabe die Beobachtung
             gemacht, dass der Quantisierer mit bis zu 4 Stufen für einen
             Spannungswert arbeitet. Daher könnten auch Fehler bis zu $\pm 0.07\
-            V$ erwartet werden. Die erreichten $\pm 0.7\ V$ dagegen sind
-            dennoch nicht akzeptabel.
+            V$ erwartet werden. Die erreichten $\pm 0.7\ V$ dagegen sind dennoch
+            hoch, was auf die niedrige Abtastfrequenz zurück zu führen
+            ist. Ein Vergleich mit dem Quantisierungsfehler bei dem Sinussignal
+            mit $100kHz$ Abtastfrequenz wird diese Fehlerquelle bestätigen.
             
             \vspace{1em}
             
             Das Histogramm in Abbildung \ref{sin8_Hist}, als
             Häufigkeitverteilung des Quantisierungsfehlers dargestellt, zeigt
             das Auftreten der jeweiligen Fehler in absoluten Werten. Einen
-            Vergleich können wir nach der Betrachtung des Sinussignals bei einer
-            höheren Taktfrequenz erstellen.
+            Vergleich können wir auch hier nach der Betrachtung des Sinussignals
+            bei der höheren Taktfrequenz erstellen.
             
             
             \vspace{1em}
@@ -752,7 +754,8 @@
            Qunatisierungsfehler, der den Erwartungen nach wieder geringer
            geworden ist. Dieser nimmt im Plot einen Wert von ca. $\pm
            0.07\ V$ an, womit er im Rahmen unserer praktischen
-           Beobachtungen,welche mit unserem Quantisierer gemacht wurden, sind.\\
+           Beobachtungen, welche mit unserem Quantisierer gemacht wurden,
+           sind.\\
            Das Histogramm besitzt hierbei zwar höhere Bins um $0V$ herum, aber
            die Gesamtbreite ist deutlich schmaler als bei dem
            Ergebniss mit dem Dreiecksignal bei $8kHz$ Abtastfrequenz.
@@ -760,11 +763,23 @@
            \vspace{1em}
            
            Insgesamt können wir sagen, dass die Quantisierungsfehler bei
-           Signalen mit höheren Takfrequenzen deutlich geringer sind. Auch ein
+           Signalen mit höheren Taktfrequenzen deutlich geringer sind. Auch ein
            kleiner Unterschied zwischen Sinussignal und Dreiecksignal macht sich
            bemerkbar, da die Quantisierungsfehler beider Dreiecksignale im
            Durchschnitt kleiner sind als die Quantisierungsfehler der
-           Sinssignale.
+           Sinssignale. Dies könnte daran liegen, dass das Dreiecksignal eine
+           lineare Steigung besitzt, wohingegen das Sinussignal zunächst
+           steiler ansteigt, später aber flacher wird bevor es wieder abfällt.
+           Wenn man hier mit einer kleinen Abtastfrequenz arbeitet, könnten beim
+           Sinussignal, durch den kurzzeitig großen Anstieg, größere Anteile
+           unabgetastet bleiben, wodurch der Quantisierungsfehler wachsen
+           würde.\\
+           
+           Von der Höhe der verwendeten Abtastfreuqenz abgesehen, kann der
+           Quantisierungsfehler eines Signals trotzdem nicht $0V$ annehmen, da
+           der reale Quantisierer selber nicht unendlich genau arbeiten kann.
+           Egal wie gut das Signal abgetastet wird, ein Fehler von $\frac{1}{2}U_{LSB}$
+           sollte immer zu erwarten sein. 
            
         \end{quote}  % Ende Subsection Quantisierungsfehler und Histogram
         
