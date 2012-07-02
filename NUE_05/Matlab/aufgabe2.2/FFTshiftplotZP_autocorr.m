@@ -26,9 +26,7 @@ y_DFT = fftshift(fft(y));
 N = length(y);
 %Betragsspektrum
 %y_DFT_abs = 10*LOG10(abs(y_DFT)/N);
-y_DFT_abs = abs(y_DFT)/(N/zpf);
-%Phasenspektrum
-y_DFT_phase = unwrap(angle(y_DFT))/N;
+y_DFT_abs = (abs(y_DFT)/(N/zpf))^2;
 %Zeitachse
 t = T_ges*(0:(N-1))/(N-1);
 %Frequenzachse
